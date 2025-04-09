@@ -1,0 +1,20 @@
+﻿@page
+@model StockServe.Pages.KeuzepaginaModel
+@{
+}
+
+<div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-6 bg-secondary text-center rounded p-5">
+            <h1>Welkom</h1>
+            <p>Maak hier uw keuze naar welke pagina u toe wilt</p>
+
+            <form method="post">
+                <div class="d-grid gap-3">
+                    <button type="submit" formaction="/Voorraaddashbord" class="btn btn-light w-100">Voorraaddashboard</button>
+                    <button type="submit" formaction="/Tafeldashbord" class="btn btn-light w-100">Tafeldashboard</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

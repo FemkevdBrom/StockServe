@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "InlogPage";
+}
+
+<div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-6 bg-secondary text-center rounded p-5">
+            <h1 class="display-4">Welkom bij StockServe,</h1>
+            <p>Log hier met uw gegevens in</p>
+            <form method="post">
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Voer hier uw Email in</label>
+                    <input type="text" id="Email" name="Email" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="wachtwoord" class="form-label">Voer hier uw wachtwoord in</label>
+                    <input type="password" id="wachtwoord" name="wachtwoord" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-light w-100">Inloggen</button>
+            </form>
+        </div>
+    </div>
+</div>

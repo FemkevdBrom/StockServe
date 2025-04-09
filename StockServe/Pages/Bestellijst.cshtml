@@ -1,0 +1,49 @@
+﻿@page
+@model StockServe.Pages.BestellijstModel
+@{
+}
+<div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
+    <div class="row h-100">
+        <!-- Sidebar -->
+        <div class="col-md-3 bg-secondary text-center rounded p-3">
+            <h2>Menu</h2>
+            <div class="d-grid gap-2 my-3">
+                <button class="btn btn-light" onclick="location.href='VoorraadDashbord'">Voorraad</button>
+                <button class="btn btn-light">Bestellijst</button>
+                <button class="btn btn-light">Voeg Gerecht Toe</button>
+                <button class="btn btn-light">Pas Gerecht Aan</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 bg-dark rounded p-3">
+            <div class="row fw-bold text-light border-bottom pb-2 mb-3">
+                <div class="col">Product naam</div>
+                <div class="col">Voorraad</div>
+                <div class="col">Voorgestelde Hoeveelheid</div>
+                <div class="col">Daadwerkelijk bestelde hoeveelheid</div>
+				<div class="col">Leverancier</div>
+
+            </div>
+            <!-- alle informatie wordt of berekent of komt uit de database
+				De producten die hierin staan zijn de producten die besteld moeten worden. en die dus onder de gewenste hoeveelheid
+                De voorgestelde hoeveelheid is het vershil tussen de gewenstehoeveelheid en voorraad afgerond in de hoeveelheid
+                waarin dit product te koop is. 
+                de daadwerkelijke bestelde hoeveelheid kan je als gebruiker aanpassen op wanneer je dit product dus bijvoorbeeld 
+                dit product minder of meer wilt bestellen als de voorgestelde hoeveelheid.
+            -->
+            @for (int i = 0; i < 15; i++)
+            {
+                <div class="row bg-secondary text-light rounded py-2 mb-2">
+                    <div class="col">Product @i</div>
+                    <div class="col">50</div>
+                    <div class="col">20</div>
+                    <div class="col">100</div>
+					<div class="col">Leverancier A</div>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

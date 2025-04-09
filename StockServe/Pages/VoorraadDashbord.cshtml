@@ -1,0 +1,45 @@
+﻿@page
+@model StockServe.Pages.VoorraadDashbordModel
+@{
+}
+<div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
+    <div class="row h-100">
+        <!-- Sidebar -->
+        <div class="col-md-3 bg-secondary text-center rounded p-3">
+            <h2>Menu</h2>
+            <div class="d-grid gap-2 my-3">
+                <button class="btn btn-light">Voorraad</button>
+                <button class="btn btn-light" onclick="location.href='Bestellijst'">Bestellijst</button>
+                <button class="btn btn-light">Voeg Gerecht Toe</button>
+                <button class="btn btn-light">Pas Gerecht Aan</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 bg-dark rounded p-3">
+            <div class="row fw-bold text-light border-bottom pb-2 mb-3">
+                <div class="col">Product naam</div>
+                <div class="col">Voorraad</div>
+                <div class="col">Drempelwaarde</div>
+                <div class="col">Gewenste hoeveelheid</div>
+                <div class="col">Bestelde hoeveelheid</div>
+                <div class="col">Percentage</div>
+            </div>
+            <!--alle gegevens komen uit de database, behalve de percentage, dit is het procent van de gewenste hoeveelheid wat er nu op voorraad is-->
+            <!-- Scrollable container for products -->
+            <div class="overflow-auto" style="max-height: calc(100vh - 150px);">
+                @for (int i = 0; i < 15; i++)
+                {
+                    <div class="row bg-secondary text-light rounded py-2 mb-2">
+                        <div class="col">Product @i</div>
+                        <div class="col">50</div>
+                        <div class="col">20</div>
+                        <div class="col">100</div>
+                        <div class="col">30</div>
+                        <div class="col">60%</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

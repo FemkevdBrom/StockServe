@@ -1,0 +1,59 @@
+﻿@page
+@model StockServe.Pages.GerechtDashbordModel
+@{
+	var tableId = Model.TableId; // Tafel ID ophalen
+}
+<div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
+    <div class="row h-100">
+        <!-- Sidebar -->
+        <div class="col-md-3 bg-secondary text-center rounded p-3">
+            <h2>Menu</h2> 
+            <p>Table: @tableId</p> <!--Toont welke tafel geselecteerd is-->
+            <div class="d-grid gap-2 my-3">
+                <button class="btn btn-light">Bestelling</button>
+                <button class="btn btn-light">Rekening</button>
+                <!--Deze aanpasssen dat bij bestelling een bestelling plaatsen wordt. en bij rekening pin of cash wordt en dit later doorgezet wordt-->
+                <div class="d-flex justify-content-around">
+                    <button class="btn btn-outline-light">Pin</button>
+                    <button class="btn btn-outline-light">Cash</button>
+                </div>
+            </div>
+            <!--Dit moeten de geslecteerde gerechten en prijzen worden
+                bij Rekening moet hierin alle gerechten komen te staan die tot dan bij deze tafel horen en nog niet besteld zijn. 
+            -->
+            <div class="text-start mt-4">
+                <p>Gerecht <span class="float-end">€10,00</span></p>
+                <p>Gerecht <span class="float-end">€10,00</span></p>
+                <p>Gerecht <span class="float-end">€10,00</span></p>
+                <p>Gerecht <span class="float-end">€10,00</span></p>
+            </div>
+            <hr />
+            <!--De prijzen van de gerechten optellen en hier weer geven.-->
+            <p class="text-end fw-bold">Totaal: €40,00</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 bg-dark rounded p-3">
+            <!--Catogorien worden weergegeven,
+                deze vanderen dat de ze uit de database gehaald woorden en hier weergegeven worden
+            -->
+            <div class="d-flex justify-content-start gap-3 mb-3">
+                <button class="btn btn-secondary">Voorgerecht</button>
+                <button class="btn btn-secondary">Hoofdgerecht</button>
+                <button class="btn btn-secondary">Nagerecht</button>
+                <button class="btn btn-secondary">Vlees</button>
+            </div>
+            <!--Gerechten weergeven rooster
+				Hieraan code toevoegen dat de gerechten uit de database worden gehaald en weergegeven in het rooster
+            -->
+            <div class="row row-cols-4 g-3">
+                @for (int i = 0; i < 28; i++)
+                {
+                    <div class="col">
+                        <button class="btn btn-light w-100">Gerecht</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
