@@ -96,3 +96,4 @@ C:\Users\femke\source\repos\Semester2\StockServe\StockServe\obj\Debug\net9.0\ref
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\obj\Debug\net9.0\StockServe.pdb
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\obj\Debug\net9.0\StockServe.genruntimeconfig.cache
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\obj\Debug\net9.0\ref\StockServe.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\obj\Debug\net9.0\StockServe.sourcelink.json
