@@ -1,0 +1,16 @@
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\bin\Debug\net9.0\StockServe.Logic.deps.json
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\bin\Debug\net9.0\StockServe.Logic.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\bin\Debug\net9.0\StockServe.Logic.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\bin\Debug\net9.0\StockServe.Data.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\bin\Debug\net9.0\StockServe.Data.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.csproj.AssemblyReference.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.AssemblyInfoInputs.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.AssemblyInfo.cs
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.csproj.CoreCompileInputs.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.sourcelink.json
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockSer.4E25C4EC.Up2Date
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\refint\StockServe.Logic.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\StockServe.Logic.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Logic\obj\Debug\net9.0\ref\StockServe.Logic.dll

@@ -9,14 +9,14 @@ namespace StockServe.Pages
         {
         }
 
-        public IActionResult onPostVoorraaddashboard()
+        public IActionResult OnPostVoorraaddashboard()
         {
             return RedirectToPage("/Voorraaddashbord");
         }
 
-        public IActionResult onPostTafeldashbord()
+        public IActionResult OnPostTafeldashbord()
         {
-            return RedirectToPage("/Tafeldashbord");
+            return RedirectToPage("/TafelDashbord");
         }
     }
 }

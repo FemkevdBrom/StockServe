@@ -1,0 +1,2 @@
+.vs/ 
+-e ".vs/\nbin/\nobj/\n*.user\n*.suo\n*.userosscache\n*.sln.docstates" 

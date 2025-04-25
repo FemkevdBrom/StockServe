@@ -16,26 +16,17 @@
         <!-- Main Content: Tables -->
         <div class="col-md-9 bg-dark rounded p-3">
             <div class="row g-3">
-                @{
-                    var random = new Random();
-                    for (int i = 1; i <= 20; i++)
-                    {
-                    }
-                }
-
-                @for (int i = 1; i <= 20; i++)
+                @foreach (var table in Model.Tables)
                 {
-					bool isCircle = i % 4 == 0; // elke vierde tafel is een cirkel
-
                     <div class="col-md-3">
-                        <!-- onthoud met welke tafel hij doorgestuurd is-->
-                        <a href="/GerechtDashbord?tableId=@i" class="d-flex justify-content-center align-items-center text-dark bg-light fw-bold"
-                           style="width: 100px; height: 100px; margin: auto;
-                                    @((isCircle ? "border-radius: 50%;" : "border-radius: 10px;"))">
-                            @i
+                        <a href="/GerechtDashbord?tableId=@table.TableNumber"
+                           class="d-flex justify-content-center align-items-center text-dark bg-light fw-bold"
+                           style="width: 100px; height: 100px; margin: auto; border-radius: 10px;">
+                            @table.TableNumber
                         </a>
                     </div>
                 }
+
             </div>
         </div>
     </div>

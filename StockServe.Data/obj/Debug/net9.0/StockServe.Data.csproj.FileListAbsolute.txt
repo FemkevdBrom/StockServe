@@ -1,0 +1,13 @@
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\bin\Debug\net9.0\StockServe.Data.deps.json
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\bin\Debug\net9.0\StockServe.Data.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\bin\Debug\net9.0\StockServe.Data.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.AssemblyInfoInputs.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.AssemblyInfo.cs
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.csproj.CoreCompileInputs.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.sourcelink.json
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\refint\StockServe.Data.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\ref\StockServe.Data.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe.Data\obj\Debug\net9.0\StockServe.Data.csproj.AssemblyReference.cache
