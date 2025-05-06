@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using StockServe.Logic;
 
 namespace StockServe.Pages
 {
@@ -24,9 +25,15 @@ namespace StockServe.Pages
             
         public IActionResult OnPost()
         {
-            //Voeg logica toe om de gebruiker in te loggen
-            //Bijvoorbeeld: controleer of de gebruikersnaam en het wachtwoord correct zijn
-            return RedirectToPage("/Keuzepagina");
+            UserService userService = new UserService();
+            User? user = userService.Authenticate(Email, Password);
+            if (user != null)
+            {
+                HttpContext.Session.SetString("userRole", user.Role); // Gebruikersrol in sessie opslaan
+                return RedirectToPage("/Keuzepagina");
+            }
+            else
+                return Page();
 
         }
     }

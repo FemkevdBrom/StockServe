@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StockServe.Logic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c9eb5509aac77b84c96e0f6257e3e1cbdde0a1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eee2082396287be0c229f73818dbd0a2bbbd387b")]
 [assembly: System.Reflection.AssemblyProductAttribute("StockServe.Logic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StockServe.Logic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

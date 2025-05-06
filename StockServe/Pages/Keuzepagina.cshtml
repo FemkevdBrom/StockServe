@@ -8,6 +8,12 @@
         <div class="col-md-6 bg-secondary text-center rounded p-5">
             <h1>Welkom</h1>
             <p>Maak hier uw keuze naar welke pagina u toe wilt</p>
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger mt-3">
+                    @TempData["Error"]
+                </div>
+            }
 
             <form method="post">
                 <div class="d-grid gap-3">
