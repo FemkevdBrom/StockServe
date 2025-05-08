@@ -77,5 +77,32 @@ namespace StockServe.Data
                 }
             }
         }
+
+        public void UpdatePaymentStatus(int tableId, string payStatus)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                        UPDATE [Order] 
+                        SET Paystatus = @PayStatus 
+                        WHERE TableId = @TableId AND Paystatus = 'Nog niet betaald'";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@TableId", tableId);
+                        command.Parameters.AddWithValue("@PayStatus", payStatus);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error updating payment status: {ex.Message}");
+                    throw;
+                }
+            }
+        }
     }
 }

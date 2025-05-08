@@ -186,13 +186,47 @@ namespace StockServe.Pages
         public IActionResult OnPostCash() 
         {
             LoadTableId();
-            return Page();
+            try
+            {
+                var orderService = new OrderService();
+                var orderDishService = new OrderDishService();
+                
+                // Update order dish status to 'Betaald'
+                orderDishService.UpdateOrderDishStatus(TableId, "Betaald");
+                
+                // Update order payment status
+                orderService.UpdatePaymentStatus(TableId, "Betaald Cash");
+                
+                return RedirectToPage("/TafelDashbord", new { tableId = TableId });
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het verwerken van de cash betaling: {ex.Message}";
+                return Page();
+            }
         }
 
         public IActionResult OnPostPin() 
         {
             LoadTableId();
-            return Page();
+            try
+            {
+                var orderService = new OrderService();
+                var orderDishService = new OrderDishService();
+                
+                // Update order dish status to 'Betaald'
+                orderDishService.UpdateOrderDishStatus(TableId, "Betaald");
+                
+                // Update order payment status
+                orderService.UpdatePaymentStatus(TableId, "Betaald Pin");
+                
+                return RedirectToPage("/TafelDashbord", new { tableId = TableId });
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het verwerken van de pin betaling: {ex.Message}";
+                return Page();
+            }
         }
 
         public IActionResult OnPostBestellingToevoegen()

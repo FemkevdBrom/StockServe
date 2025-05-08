@@ -59,7 +59,9 @@ namespace StockServe.Data
                         SELECT od.DishId, SUM(od.Amount) as TotalAmount
                         FROM [OrderDish] od
                         JOIN [Order] o ON od.OrderId = o.Id
-                        WHERE o.TableId = @TableId AND o.Paystatus = 'Nog niet betaald'
+                        WHERE o.TableId = @TableId 
+                        AND o.Paystatus = 'Nog niet betaald'
+                        AND od.Status = 'Actief'
                         GROUP BY od.DishId";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -109,6 +111,37 @@ namespace StockServe.Data
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error adding order dish: {ex.Message}");
+                    throw;
+                }
+            }
+        }
+
+        public void UpdateOrderDishStatus(int tableId, string status)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                        UPDATE od
+                        SET od.Status = @Status
+                        FROM [OrderDish] od
+                        JOIN [Order] o ON od.OrderId = o.Id
+                        WHERE o.TableId = @TableId 
+                        AND o.Paystatus = 'Nog niet betaald'
+                        AND od.Status = 'Actief'";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@TableId", tableId);
+                        command.Parameters.AddWithValue("@Status", status);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error updating order dish status: {ex.Message}");
                     throw;
                 }
             }

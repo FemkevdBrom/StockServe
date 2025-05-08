@@ -41,6 +41,11 @@ namespace StockServe.Logic
             new OrderRepository().AddOrder(orderDto);
             return orderDto.Id;
         }
+
+        public void UpdatePaymentStatus(int tableId, string payStatus)
+        {
+            new OrderRepository().UpdatePaymentStatus(tableId, payStatus);
+        }
     }
 }
 

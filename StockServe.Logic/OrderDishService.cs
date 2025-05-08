@@ -41,5 +41,10 @@ namespace StockServe.Logic
             }
             return orderDishes;
         }
+
+        public void UpdateOrderDishStatus(int tableId, string status)
+        {
+            new OrderDishRepository().UpdateOrderDishStatus(tableId, status);
+        }
     }
 }
