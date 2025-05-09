@@ -323,6 +323,9 @@ namespace StockServe.Pages
                 Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 return Page();
             }
+            HttpContext.Session.Remove(SelectedDishesKey);
+            HttpContext.Session.Remove(TableIdKey);
+            return RedirectToPage("/TafelDashbord", new { tableId = TableId });
         }
 
         public IActionResult OnPostBestellingAanpassen()

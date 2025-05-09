@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\orderdishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,28 +146,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GerechtDashbord.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml*",
-              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml*",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGkAAAAwAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml",
+              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-06T11:20:18.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GerechtDashbord.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs*",
+              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs*",
+              "ViewState": "AgIAACwBAAAAAAAAAAAAAEQBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:02:26.784Z"
+              "WhenOpened": "2025-05-06T11:02:26.784Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

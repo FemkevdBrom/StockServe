@@ -9,7 +9,7 @@ namespace StockServe.Data
 {
     public class UserRepository
     {
-        private string _connectionString = "Server=VICTUS_LE_FEMKE;Database=StockServe;Trusted_Connection=True;TrustServerCertificate=True;";
+        private string _connectionString = DatabaseConfig.GetConnectionString();
 
         public UserDto GetUserEmailAndPassword (string email, string password)
         {
