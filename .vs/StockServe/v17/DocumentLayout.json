@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\orderdishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\orderdishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,6 +23,34 @@
       "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\orderdishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\dishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\dishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\dishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\dishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\orderdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\orderdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\orderdishdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Shared\\OrderList.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -75,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -87,20 +99,8 @@
       "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\dishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\dishrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\dishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\dishservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,57 +122,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderDishRepository.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderDishRepository.cs",
-              "RelativeDocumentMoniker": "StockServe.Data\\OrderDishRepository.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderDishRepository.cs",
-              "RelativeToolTip": "StockServe.Data\\OrderDishRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:40:11.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "StockServe.Data\\OrderRepository.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderRepository.cs",
-              "RelativeToolTip": "StockServe.Data\\OrderRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:34:10.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GerechtDashbord.cshtml",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml",
-              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml",
-              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "StockServe\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Index.cshtml",
+              "RelativeToolTip": "StockServe\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-06T11:20:18.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T09:23:25.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GerechtDashbord.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs*",
-              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs*",
-              "ViewState": "AgIAACwBAAAAAAAAAAAAAEQBAAANAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Dish.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Dish.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\Dish.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Dish.cs",
+              "RelativeToolTip": "StockServe.Logic\\Dish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:02:26.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T10:56:16.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DishService.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\DishService.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\DishService.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\DishService.cs",
+              "RelativeToolTip": "StockServe.Logic\\DishService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:56:34.358Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "OrderDishService.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderDishService.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\OrderDishService.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderDishService.cs",
+              "RelativeToolTip": "StockServe.Logic\\OrderDishService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T12:41:20.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderService.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\OrderService.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderService.cs",
+              "RelativeToolTip": "StockServe.Logic\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T12:34:30.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TableRepository.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\TableRepository.cs",
               "RelativeDocumentMoniker": "StockServe.Data\\TableRepository.cs",
@@ -184,19 +195,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderDishService.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderDishService.cs",
-              "RelativeDocumentMoniker": "StockServe.Logic\\OrderDishService.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderDishService.cs",
-              "RelativeToolTip": "StockServe.Logic\\OrderDishService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "StockServe.Data\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderRepository.cs",
+              "RelativeToolTip": "StockServe.Data\\OrderRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:41:20.286Z"
+              "WhenOpened": "2025-05-08T12:34:10.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "OrderDishRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderDishRepository.cs",
+              "RelativeDocumentMoniker": "StockServe.Data\\OrderDishRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderDishRepository.cs*",
+              "RelativeToolTip": "StockServe.Data\\OrderDishRepository.cs*",
+              "ViewState": "AgIAAIYAAAAAAAAAAAArwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T12:40:11.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DishRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\DishRepository.cs",
+              "RelativeDocumentMoniker": "StockServe.Data\\DishRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\DishRepository.cs",
+              "RelativeToolTip": "StockServe.Data\\DishRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:59:31.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\UserRepository.cs",
+              "RelativeDocumentMoniker": "StockServe.Data\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\UserRepository.cs",
+              "RelativeToolTip": "StockServe.Data\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T09:04:04.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GerechtDashbord.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:02:26.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GerechtDashbord.cshtml",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml",
+              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml",
+              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-06T11:20:18.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "OrderDish.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderDish.cs",
               "RelativeDocumentMoniker": "StockServe.Logic\\OrderDish.cs",
@@ -208,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "OrderDishDto.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderDishDto.cs",
               "RelativeDocumentMoniker": "StockServe.Data\\OrderDishDto.cs",
@@ -220,19 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderService.cs",
-              "RelativeDocumentMoniker": "StockServe.Logic\\OrderService.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\OrderService.cs",
-              "RelativeToolTip": "StockServe.Logic\\OrderService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvwwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T12:34:30.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Order.cs",
               "RelativeDocumentMoniker": "StockServe.Logic\\Order.cs",
@@ -244,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "OrderDto.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\OrderDto.cs",
               "RelativeDocumentMoniker": "StockServe.Data\\OrderDto.cs",
@@ -256,19 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Dish.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Dish.cs",
-              "RelativeDocumentMoniker": "StockServe.Logic\\Dish.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Dish.cs",
-              "RelativeToolTip": "StockServe.Logic\\Dish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T10:56:16.044Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "TafelDashbord.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\TafelDashbord.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\TafelDashbord.cshtml",
@@ -280,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "OrderList.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Shared\\OrderList.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\Shared\\OrderList.cshtml",
@@ -291,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "TafelDashbord.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\TafelDashbord.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\TafelDashbord.cshtml.cs",
@@ -303,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "DishDto.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\DishDto.cs",
               "RelativeDocumentMoniker": "StockServe.Data\\DishDto.cs",
@@ -315,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Keuzepagina.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Keuzepagina.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\Keuzepagina.cshtml.cs",
@@ -327,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\Index.cshtml.cs",
@@ -339,19 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "StockServe\\Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Index.cshtml",
-              "RelativeToolTip": "StockServe\\Pages\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-06T09:23:25.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\UserService.cs",
               "RelativeDocumentMoniker": "StockServe.Logic\\UserService.cs",
@@ -363,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\User.cs",
               "RelativeDocumentMoniker": "StockServe.Logic\\User.cs",
@@ -375,43 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "DishService.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\DishService.cs",
-              "RelativeDocumentMoniker": "StockServe.Logic\\DishService.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\DishService.cs",
-              "RelativeToolTip": "StockServe.Logic\\DishService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAIA+wBUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T10:56:34.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DishRepository.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\DishRepository.cs",
-              "RelativeDocumentMoniker": "StockServe.Data\\DishRepository.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\DishRepository.cs",
-              "RelativeToolTip": "StockServe.Data\\DishRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADgvxYAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T10:59:31.724Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\UserRepository.cs",
-              "RelativeDocumentMoniker": "StockServe.Data\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\UserRepository.cs",
-              "RelativeToolTip": "StockServe.Data\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:04:04.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Program.cs",
               "RelativeDocumentMoniker": "StockServe\\Program.cs",

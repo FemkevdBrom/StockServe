@@ -20,13 +20,12 @@
                 {
                     <div class="col-md-3">
                         <a href="/GerechtDashbord?tableId=@table.TableNumber"
-                           class="d-flex justify-content-center align-items-center text-dark bg-light fw-bold"
+                           class="d-flex justify-content-center align-items-center fw-bold @(table.HasActiveOrders ? "bg-danger text-light" : "bg-light text-dark")"
                            style="width: 100px; height: 100px; margin: auto; border-radius: 10px;">
                             @table.TableNumber
                         </a>
                     </div>
                 }
-
             </div>
         </div>
     </div>

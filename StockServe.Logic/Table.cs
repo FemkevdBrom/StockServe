@@ -10,5 +10,6 @@ namespace StockServe.Logic
     {
         public int Id { get; set; }
         public int TableNumber { get; set; }
+        public bool HasActiveOrders { get; set; }
     }
 }

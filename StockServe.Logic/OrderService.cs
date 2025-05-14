@@ -46,6 +46,7 @@ namespace StockServe.Logic
         {
             new OrderRepository().UpdatePaymentStatus(tableId, payStatus);
         }
+
     }
 }
 
