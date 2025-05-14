@@ -38,21 +38,29 @@ namespace StockServe.Pages
             }
         }
 
-        public void OnGet(string? category = null)
+        public void OnGet(string? category = null, string? selectedDishes = null)
         {
             try
             {
                 LoadTableId();
 
-                // Haal geselecteerde gerechten op uit de sessie
-                var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
-                if (!string.IsNullOrEmpty(selectedDishesJson))
+                // Haal geselecteerde gerechten op uit de query parameters of sessie
+                if (!string.IsNullOrEmpty(selectedDishes))
                 {
-                    SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
+                    SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishes);
+                    HttpContext.Session.SetString(SelectedDishesKey, selectedDishes);
                 }
                 else
                 {
-                    SelectedDishes = new List<Dish>();
+                    var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
+                    if (!string.IsNullOrEmpty(selectedDishesJson))
+                    {
+                        SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
+                    }
+                    else
+                    {
+                        SelectedDishes = new List<Dish>();
+                    }
                 }
 
                 // Gerechten ophalen uit de database
@@ -331,22 +339,45 @@ namespace StockServe.Pages
             LoadTableId();
             try
             {
+                // Verwijder het gerecht uit de geselecteerde gerechten
                 var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
                 if (!string.IsNullOrEmpty(selectedDishesJson))
                 {
                     SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
                     if (SelectedDishes != null)
                     {
-                        SelectedDishes = SelectedDishes.Where(d => d.Id != dishId).ToList();
-                        HttpContext.Session.SetString(SelectedDishesKey, JsonSerializer.Serialize(SelectedDishes));
+                        // Converteer naar List en vind de eerste index van het gerecht met de gegeven ID
+                        var dishesList = SelectedDishes.ToList();
+                        var indexToRemove = dishesList.FindIndex(d => d.Id == dishId);
+                        if (indexToRemove != -1)
+                        {
+                            // Verwijder alleen het eerste gevonden gerecht
+                            dishesList.RemoveAt(indexToRemove);
+                            SelectedDishes = dishesList;
+                            HttpContext.Session.SetString(SelectedDishesKey, JsonSerializer.Serialize(SelectedDishes));
+                        }
                     }
                 }
-                return Page();
+
+                // Terug naar de normale weergave met de geselecteerde gerechten
+                var currentCategory = HttpContext.Session.GetString(SelectedCategoryKey) ?? "Alle gerechten";
+                return RedirectToPage(new { 
+                    tableId = TableId, 
+                    category = currentCategory, 
+                    optionType = "Bestelling",
+                    selectedDishes = JsonSerializer.Serialize(SelectedDishes)
+                });
             }
             catch (Exception ex)
             {
                 ErrorMessage = $"Er is een fout opgetreden bij het verwijderen van het gerecht: {ex.Message}";
-                return Page();
+                var currentCategory = HttpContext.Session.GetString(SelectedCategoryKey) ?? "Alle gerechten";
+                return RedirectToPage(new { 
+                    tableId = TableId, 
+                    category = currentCategory, 
+                    optionType = "Bestelling",
+                    selectedDishes = JsonSerializer.Serialize(SelectedDishes)
+                });
             }
         }
 

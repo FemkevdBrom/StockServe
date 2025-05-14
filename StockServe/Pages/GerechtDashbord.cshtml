@@ -45,7 +45,7 @@
                     {
                         <form method="post">
                             <button type="submit" asp-page-handler="BestellingToevoegen" class="btn btn-outline-light me-2 w-100">Bestelling toevoegen</button>
-                            <button type="submit" asp-page-handler="GerechtVerwijderen" class="btn btn-outline-light me-2 w-100">Verwijder gerecht</button>
+                            <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="VerwijderGerecht" class="btn btn-outline-light me-2 w-100">Verwijder gerecht</button>
                             <button type="submit" asp-page-handler="OpmerkingToevoegenGerecht" class="btn btn-outline-light me-2 w-100">Opmerking toevoegen aan gerecht</button>
                         </form>
                     }
@@ -145,7 +145,20 @@
                     {
                         foreach (var dish in Model.SelectedDishes)
                         {
-                            <p>@dish.Name <span class="float-end">€@dish.Price.ToString("0.00")</span></p>
+                            @if (Model.CurrentOption == "VerwijderGerecht")
+                            {
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>@dish.Name</span>
+                                    <form method="post" asp-page-handler="GerechtVerwijderen" class="ms-2">
+                                        <input type="hidden" name="dishId" value="@dish.Id" />
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">Verwijder</button>
+                                    </form>
+                                </div>
+                            }
+                            else
+                            {
+                                <p>@dish.Name <span class="float-end">€@dish.Price.ToString("0.00")</span></p>
+                            }
                         }
                         <hr />
                         <p class="text-end fw-bold">Totaal: €@Model.SelectedDishes.Sum(d => d.Price).ToString("0.00")</p>
