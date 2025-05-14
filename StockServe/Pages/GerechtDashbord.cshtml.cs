@@ -25,7 +25,6 @@ namespace StockServe.Pages
         [BindProperty(SupportsGet = true)]
         public string CurrentOption { get; set; } = "Bestelling";
 
-
         private void LoadTableId()
         {
             if (Request.Query.ContainsKey("tableId"))
@@ -174,7 +173,6 @@ namespace StockServe.Pages
             return Page();
         }
 
-
         public IActionResult OnPostNaarTafelDashbord()
         {
             LoadTableId();
@@ -265,7 +263,7 @@ namespace StockServe.Pages
                         Price = SelectedDishes.Sum(d => d.Price),
                         Paystatus = "Nog niet betaald"
                     };
-
+                    //controleren waar of de enentueele fout bij de database ligt of bij de code kan later worden verwijderd. 
                     Console.WriteLine($"Nieuwe bestelling details:");
                     Console.WriteLine($"TableId: {order.TableId}");
                     Console.WriteLine($"Time: {order.Time}");
@@ -307,7 +305,7 @@ namespace StockServe.Pages
                     HttpContext.Session.Remove(SelectedDishesKey);
                     SelectedDishes = new List<Dish>();
 
-                    return Page();
+                    return RedirectToPage("/TafelDashbord", new { tableId = TableId });
                 }
                 else
                 {
@@ -328,12 +326,54 @@ namespace StockServe.Pages
             return RedirectToPage("/TafelDashbord", new { tableId = TableId });
         }
 
-        public IActionResult OnPostBestellingAanpassen()
+        public IActionResult OnPostGerechtVerwijderen(int dishId)
         {
             LoadTableId();
-            return Page();
+            try
+            {
+                var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
+                if (!string.IsNullOrEmpty(selectedDishesJson))
+                {
+                    SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
+                    if (SelectedDishes != null)
+                    {
+                        SelectedDishes = SelectedDishes.Where(d => d.Id != dishId).ToList();
+                        HttpContext.Session.SetString(SelectedDishesKey, JsonSerializer.Serialize(SelectedDishes));
+                    }
+                }
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het verwijderen van het gerecht: {ex.Message}";
+                return Page();
+            }
         }
 
+        public IActionResult OnPostOpmerkingToevoegenGerecht(int dishId)
+        {
+            LoadTableId();
+            try {
+                var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
+                if (!string.IsNullOrEmpty(selectedDishesJson))
+                {
+                    SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
+                    if (SelectedDishes != null)
+                    {
+                        SelectedDishes = SelectedDishes.Where(d => d.Id != dishId).ToList();
+                        HttpContext.Session.SetString(SelectedDishesKey, JsonSerializer.Serialize(SelectedDishes));
+                    }
+                }
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het Toevoegen van een opmerking aan het gerecht: {ex.Message}";
+                return Page();
+            }
+        }
+
+        //nodig om de buttens goed te kunnen laden.
         public IActionResult OnPostRekening()
         {
             LoadTableId();
@@ -351,6 +391,5 @@ namespace StockServe.Pages
             LoadTableId();
             return Page();
         }
-        
     }
 }

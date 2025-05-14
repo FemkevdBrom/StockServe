@@ -1,7 +1,7 @@
 ﻿@page
 @model StockServe.Pages.GerechtDashbordModel
 @{
-	var tableId = Model.TableId; // Tafel ID ophalen
+    var tableId = Model.TableId; // Tafel ID ophalen
 }
 <div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
     @if (!string.IsNullOrEmpty(Model.ErrorMessage))
@@ -19,22 +19,22 @@
                 <!-- Main Navigation Buttons -->
                 <form method="post">
                     <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="Bestelling"
-                            class="btn @(Model.CurrentOption == "Bestelling" ? "btn-primary" : "btn-light") mb-2 w-100">
+                    class="btn @(Model.CurrentOption == "Bestelling" ? "btn-primary" : "btn-light") mb-2 w-100">
                         Bestelling
                     </button>
 
                     <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="Rekening"
-                            class="btn @(Model.CurrentOption == "Rekening" ? "btn-primary" : "btn-light") mb-2 w-100">
+                    class="btn @(Model.CurrentOption == "Rekening" ? "btn-primary" : "btn-light") mb-2 w-100">
                         Rekening
                     </button>
 
                     <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="Betalen"
-                            class="btn @(Model.CurrentOption == "Betalen" ? "btn-primary" : "btn-light") mb-2 w-100">
+                    class="btn @(Model.CurrentOption == "Betalen" ? "btn-primary" : "btn-light") mb-2 w-100">
                         Betalen
                     </button>
 
                     <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="Terug"
-                            class="btn @(Model.CurrentOption == "Terug" ? "btn-primary" : "btn-light") mb-2 w-100">
+                    class="btn @(Model.CurrentOption == "Terug" ? "btn-primary" : "btn-light") mb-2 w-100">
                         Terug
                     </button>
                 </form>
@@ -44,8 +44,9 @@
                     @if (Model.CurrentOption == "Bestelling")
                     {
                         <form method="post">
-                            <button type="submit" asp-page-handler="BestellingToevoegen" class="btn btn-outline-light me-2">Bestelling toevoegen</button>
-                            <button type="submit" asp-page-handler="BestellingAanpassen" class="btn btn-outline-light">Bestelling aanpassen</button>
+                            <button type="submit" asp-page-handler="BestellingToevoegen" class="btn btn-outline-light me-2 w-100">Bestelling toevoegen</button>
+                            <button type="submit" asp-page-handler="GerechtVerwijderen" class="btn btn-outline-light me-2 w-100">Verwijder gerecht</button>
+                            <button type="submit" asp-page-handler="OpmerkingToevoegenGerecht" class="btn btn-outline-light me-2 w-100">Opmerking toevoegen aan gerecht</button>
                         </form>
                     }
                     else if (Model.CurrentOption == "Rekening")
@@ -103,11 +104,32 @@
                     }
                     else if (Model.CurrentOption == "Betalen")
                     {
-                        <form method="post">    
-                            <button type="submit" asp-page-handler="Pin" class="btn btn-outline-light me-2">Pin</button>
-                            <button type="submit" asp-page-handler="Cash" class="btn btn-outline-light">Cash</button>
-                        </form>
+                        <div class="w-100 mb-3 text-center">
+                            @{
+                                var dishService = new StockServe.Logic.DishService();
+                                var allDishes = dishService.GetAllDishes();
+                                decimal totalAmount = 0;
+
+                                foreach (var orderDish in Model.TableOrderDishes)
+                                {
+                                    var dish = allDishes.FirstOrDefault(d => d.Id == orderDish.DishId);
+                                    if (dish != null)
+                                    {
+                                        totalAmount += dish.Price * orderDish.Amount;
+                                    }
+                                }
+                            }
+
+                            <h4>Betalen</h4>
+                            <p>Huidige Totaal: <strong>€@totalAmount.ToString("0.00")</strong></p>
+
+                            <form method="post" class="d-flex justify-content-center">
+                                <button type="submit" asp-page-handler="Pin" class="btn btn-outline-light me-2">Pin</button>
+                                <button type="submit" asp-page-handler="Cash" class="btn btn-outline-light">Cash</button>
+                            </form>
+                        </div>
                     }
+
                     else if (Model.CurrentOption == "Terug")
                     {
                         <form method="post">
