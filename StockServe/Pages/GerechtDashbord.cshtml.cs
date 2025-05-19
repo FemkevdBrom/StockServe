@@ -5,6 +5,10 @@ using StockServe.Data;
 using System;
 using System.Text.Json;
 using System.Linq;
+using StockServe.Logic.Service;
+using Stockserve.Domain.Model;
+using Stockserve.Domain.Dto;
+
 
 namespace StockServe.Pages
 {
@@ -24,6 +28,16 @@ namespace StockServe.Pages
         
         [BindProperty(SupportsGet = true)]
         public string CurrentOption { get; set; } = "Bestelling";
+
+        private readonly DishService _dishService; 
+        private readonly OrderDishService _orderDishService;
+        private readonly OrderService _orderService;
+        public GerechtDashbordModel(DishService dishService, OrderDishService orderDishService, OrderService orderService)
+        {
+            _dishService = dishService;
+            _orderDishService = orderDishService;
+            _orderService = orderService;
+        }
 
         private void LoadTableId()
         {
@@ -64,8 +78,8 @@ namespace StockServe.Pages
                 }
 
                 // Gerechten ophalen uit de database
-                DishService dishService = new DishService();
-                Dishes = dishService.GetAllDishes();
+                
+                Dishes = _dishService.GetAllDishes();
 
                 if (Dishes == null || !Dishes.Any())
                 {
@@ -111,8 +125,8 @@ namespace StockServe.Pages
                     ? JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson) 
                     : new List<Dish>();
 
-                DishService dishService = new DishService();
-                var allDishes = dishService.GetAllDishes();
+                
+                var allDishes = _dishService.GetAllDishes();
                 var dishToAdd = allDishes.FirstOrDefault(d => d.Id == dishId);
                 
                 if (dishToAdd != null)
@@ -151,13 +165,13 @@ namespace StockServe.Pages
             // Als Rekening of Betalen is geselecteerd, haal de bestelde gerechten op
             if (optionType == "Rekening" || optionType == "Betalen")
             {
-                var orderDishService = new OrderDishService();
+                var orderDishService = _orderDishService;
                 TableOrderDishes = orderDishService.GetOrderDishesForTable(TableId);
             }
 
             // Gerechten ophalen uit de database
-            DishService dishService = new DishService();
-            Dishes = dishService.GetAllDishes();
+            
+            Dishes = _dishService.GetAllDishes();
 
             if (Dishes == null || !Dishes.Any())
             {
@@ -194,8 +208,8 @@ namespace StockServe.Pages
             LoadTableId();
             try
             {
-                var orderService = new OrderService();
-                var orderDishService = new OrderDishService();
+                var orderService = _orderService;
+                var orderDishService = _orderDishService;
                 
                 // Update order dish status to 'Betaald'
                 orderDishService.UpdateOrderDishStatus(TableId, "Betaald");
@@ -217,8 +231,8 @@ namespace StockServe.Pages
             LoadTableId();
             try
             {
-                var orderService = new OrderService();
-                var orderDishService = new OrderDishService();
+                var orderService = _orderService;
+                var orderDishService = _orderDishService;
                 
                 // Update order dish status to 'Betaald'
                 orderDishService.UpdateOrderDishStatus(TableId, "Betaald");
@@ -278,13 +292,13 @@ namespace StockServe.Pages
                     Console.WriteLine($"Price: {order.Price}");
                     Console.WriteLine($"Paystatus: {order.Paystatus}");
 
-                    var orderService = new OrderService();
+                    var orderService = _orderService;
                     int orderId = orderService.AddOrder(order);
 
                     // Add dishes to OrderDish table
-                    var orderDishRepository = new OrderDishRepository();
-                    var dishService = new DishService();
-                    
+                    var orderDishRepository = _orderDishService;
+                    var dishService = _dishService;
+
                     // Group dishes by ID and count occurrences
                     var groupedDishes = SelectedDishes
                         .GroupBy(d => d.Id)

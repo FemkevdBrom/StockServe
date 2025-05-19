@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Stockserve.Domain.Model;
+using Stockserve.Domain.Dto;
+using StockServe.Logic.Interface;
+
+namespace StockServe.Logic.Service
+{   
+    public class DishService
+    {
+        public readonly IDish _dishRepository;
+        public DishService(IDish dishRepository)
+        {
+            _dishRepository = dishRepository;
+        }
+        public List<Dish> GetAllDishes()
+        {
+            List<DishDto> dishDtos = _dishRepository.GetAllDishes();
+            List<Dish> dishes = new List<Dish>();
+            foreach (var dishDto in dishDtos)
+            {
+                dishes.Add(new Dish
+                {
+                    Id = dishDto.Id,
+                    Name = dishDto.Name,
+                    Price = dishDto.Price,
+                    Category = dishDto.Category,
+                    Description = dishDto.Description
+                    
+                });
+            }
+            return dishes;
+        }
+
+        public bool DishExists(int dishId)
+        {
+            return  _dishRepository.DishExists(dishId);
+        }
+    }
+}

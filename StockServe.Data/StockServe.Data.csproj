@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Stockserve.Domain\Stockserve.Domain.csproj" />
+    <ProjectReference Include="..\StockServe.Logic\StockServe.Logic.csproj" />
+  </ItemGroup>
+
 </Project>

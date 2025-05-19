@@ -1,12 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using StockServe.Logic;
+using StockServe.Logic.Service;
+using Stockserve.Domain.Model;
+using Stockserve.Domain.Dto;
 
 namespace StockServe.Pages
 {
     public class TafelDashbordModel : PageModel
     {
         private readonly TableService _tableService;
+
         public IList<Table>? Tables { get; set; }
 
         public TafelDashbordModel(TableService tableService)

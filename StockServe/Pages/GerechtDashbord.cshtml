@@ -67,8 +67,7 @@
                                         </thead>
                                         <tbody>
                                             @{
-                                                var dishService = new StockServe.Logic.DishService();
-                                                var allDishes = dishService.GetAllDishes();
+                                                var allDishes = Model.Dishes;
                                                 decimal totalAmount = 0;
                                             }
                                             @foreach (var orderDish in Model.TableOrderDishes)
@@ -106,8 +105,8 @@
                     {
                         <div class="w-100 mb-3 text-center">
                             @{
-                                var dishService = new StockServe.Logic.DishService();
-                                var allDishes = dishService.GetAllDishes();
+
+                                var allDishes = Model.Dishes;
                                 decimal totalAmount = 0;
 
                                 foreach (var orderDish in Model.TableOrderDishes)

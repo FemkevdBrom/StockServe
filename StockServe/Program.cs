@@ -1,5 +1,7 @@
 using StockServe.Data;
-using StockServe.Logic;
+using StockServe.Data.Repository;
+using StockServe.Logic.Interface;
+using StockServe.Logic.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +10,16 @@ builder.Services.AddRazorPages();
 builder.Services.AddSession();
 
 // Register services
+builder.Services.AddScoped<IDish, DishRepository>();
+builder.Services.AddScoped<DishService>();
+builder.Services.AddScoped<IOrder, OrderRepository>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<IOrderDish, OrderDishRepository>();
 builder.Services.AddScoped<OrderDishService>();
+builder.Services.AddScoped<ITable, TableRepository>();
 builder.Services.AddScoped<TableService>();
+builder.Services.AddScoped<IUser, UserRepository>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 

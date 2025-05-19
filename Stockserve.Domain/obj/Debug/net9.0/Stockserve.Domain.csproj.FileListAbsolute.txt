@@ -1,0 +1,12 @@
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\bin\Debug\net9.0\Stockserve.Domain.deps.json
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\bin\Debug\net9.0\Stockserve.Domain.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\bin\Debug\net9.0\Stockserve.Domain.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.AssemblyInfoInputs.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.AssemblyInfo.cs
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.csproj.CoreCompileInputs.cache
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.sourcelink.json
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\refint\Stockserve.Domain.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\Stockserve.Domain.pdb
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.Domain\obj\Debug\net9.0\ref\Stockserve.Domain.dll
