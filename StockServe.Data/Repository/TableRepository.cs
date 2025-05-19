@@ -1,11 +1,11 @@
 ﻿using Microsoft.Data.SqlClient;
 using Stockserve.Domain.Dto;
-using StockServe.Logic.Interface;
+using StockServe.Logic.InterfaceRepository;
 
 
 namespace StockServe.Data.Repository
 {
-    public class TableRepository : ITable
+    public class TableRepository : ITableRepository
     {
         private string _connectionString = DatabaseConfig.GetConnectionString();
 

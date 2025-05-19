@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockServe.Logic.Interface
+namespace StockServe.Logic.InterfaceRepository
 {
-    public interface IDish
+    public interface IDishRepository
     {
         List<DishDto> GetAllDishes();
         bool DishExists(int dishId);

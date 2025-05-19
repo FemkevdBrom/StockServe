@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Stockserve.Domain.Dto;
 using Stockserve.Domain.Model;
-using StockServe.Logic.Interface;
+using StockServe.Logic.InterfaceRepository;
 
 namespace StockServe.Logic.Service
 {
     public class UserService
     {
-        private readonly IUser _userRepository;
-        public UserService(IUser userRepository)
+        private readonly IUserRepository _userRepository;
+        public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }

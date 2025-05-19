@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Stockserve.Domain.Dto;
-using StockServe.Logic.Interface;
+using StockServe.Logic.InterfaceRepository;
 
 namespace StockServe.Data.Repository
 {
-    public class DishRepository : IDish
+    public class DishRepository : IDishRepository
     {
         private string _connectionString = DatabaseConfig.GetConnectionString();
 

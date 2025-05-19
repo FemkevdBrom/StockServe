@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Stockserve.Domain.Model;
 using Stockserve.Domain.Dto;
-using StockServe.Logic.Interface;
+using StockServe.Logic.InterfaceRepository;
 
 namespace StockServe.Logic.Service
 {   
     public class DishService
     {
-        public readonly IDish _dishRepository;
-        public DishService(IDish dishRepository)
+        public readonly IDishRepository _dishRepository;
+        public DishService(IDishRepository dishRepository)
         {
             _dishRepository = dishRepository;
         }

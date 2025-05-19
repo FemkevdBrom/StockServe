@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Stockserve.Domain.Model;
 using Stockserve.Domain.Dto;
-using StockServe.Logic.Interface;
+using StockServe.Logic.InterfaceRepository;
 
 namespace StockServe.Logic.Service
 {
     public class OrderDishService
     {
-        public readonly IOrderDish _orderDishRepository;
-        public OrderDishService(IOrderDish orderDishRepository)
+        public readonly IOrderDishRepository _orderDishRepository;
+        public OrderDishService(IOrderDishRepository orderDishRepository)
         {
             _orderDishRepository = orderDishRepository;
         }

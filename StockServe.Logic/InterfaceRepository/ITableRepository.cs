@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockServe.Logic.Interface
+namespace StockServe.Logic.InterfaceRepository
 {
-    public interface IUser
+    public interface ITableRepository
     {
-        UserDto GetUserEmailAndPassword(string email, string password);
+        List<TableDto> GetAllTables();
     }
 }

@@ -1,14 +1,14 @@
 ﻿using Stockserve.Domain.Dto;
 using Stockserve.Domain.Model;
-using StockServe.Logic.Interface;
+using StockServe.Logic.InterfaceRepository;
 
 namespace StockServe.Logic.Service
 {
     public class TableService
     {
         private readonly OrderDishService _orderDishService;
-        private readonly ITable _tableRepository;
-        public TableService(ITable tableRepository, OrderDishService orderDishService)
+        private readonly ITableRepository _tableRepository;
+        public TableService(ITableRepository tableRepository, OrderDishService orderDishService)
         {
             _tableRepository = tableRepository;
             _orderDishService = orderDishService;

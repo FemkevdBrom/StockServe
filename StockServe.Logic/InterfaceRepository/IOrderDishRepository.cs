@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockServe.Logic.Interface
+namespace StockServe.Logic.InterfaceRepository
 {
-    public interface IOrderDish
+    public interface IOrderDishRepository
     {
         List<OrderDishDto> GetOrderDishes();
         List<OrderDishDto> GetOrderDishesForTable(int tableId);

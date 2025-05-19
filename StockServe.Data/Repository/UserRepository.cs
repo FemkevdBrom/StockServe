@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Stockserve.Domain.Dto;
-using StockServe.Logic.Interface;
 using Microsoft.Data.SqlClient;
+using StockServe.Logic.InterfaceRepository;
 
 namespace StockServe.Data.Repository
 {
-    public class UserRepository : IUser
+    public class UserRepository : IUserRepository
     {
         private string _connectionString = DatabaseConfig.GetConnectionString();
 
