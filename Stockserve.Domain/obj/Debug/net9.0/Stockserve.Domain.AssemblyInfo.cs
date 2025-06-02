@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Stockserve.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54b5b133aa63b303b059542d31994e54984f368b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bec3c08d85157919137ddd1a89fa7bb6dc23945b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Stockserve.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Stockserve.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
