@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using StockServe.Logic;
-using StockServe.Data;
-using System;
-using System.Text.Json;
-using System.Linq;
-using StockServe.Logic.Service;
-using Stockserve.Domain.Model;
 using Stockserve.Domain.Dto;
+using Stockserve.Domain.Model;
+using StockServe.Data;
+using StockServe.Logic;
+using StockServe.Logic.Service;
+using StockServe.Logic.Exceptions;
+using System;
+using System.Linq;
+using System.Text.Json;
 
 
 namespace StockServe.Pages
@@ -336,11 +337,19 @@ namespace StockServe.Pages
                     return Page();
                 }
             }
+            catch (OrderServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
             catch (Exception ex)
             {
-                ErrorMessage = $"Er is een fout opgetreden bij het toevoegen van de bestelling: {ex.Message}";
-                Console.WriteLine($"Exception: {ex.Message}");
-                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+                // Optioneel: fallback voor andere onverwachte fouten
+                ErrorMessage = $"Onverwachte fout: {ex.Message}";
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
                 return Page();
             }
             HttpContext.Session.Remove(SelectedDishesKey);

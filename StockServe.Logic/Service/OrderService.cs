@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Stockserve.Domain.Dto;
+using Stockserve.Domain.Model;
+using StockServe.Logic.InterfaceRepository;
+using StockServe.Logic.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Stockserve.Domain.Dto;
-using Stockserve.Domain.Model;
-using StockServe.Logic.InterfaceRepository;
+
 
 namespace StockServe.Logic.Service
 {
@@ -18,21 +20,37 @@ namespace StockServe.Logic.Service
         }
         public List<Order> GetAllOrders()
         {
-            List<OrderDto> orderDtos = _orderRepository.GetAllOrders();
-            List<Order> orders = new List<Order>();
-            foreach (var orderDto in orderDtos)
+            try
             {
-                orders.Add(new Order
+
+                List<OrderDto> orderDtos = _orderRepository.GetAllOrders();
+                List<Order> orders = new List<Order>();
+                foreach (var orderDto in orderDtos)
                 {
-                    Id = orderDto.Id,
-                    TableId = orderDto.TableId,
-                    Time = orderDto.Time,
-                    Price = orderDto.Price,
-                    Paystatus = orderDto.Paystatus
-                });
+                    orders.Add(new Order
+                    {
+                        Id = orderDto.Id,
+                        TableId = orderDto.TableId,
+                        Time = orderDto.Time,
+                        Price = orderDto.Price,
+                        Paystatus = orderDto.Paystatus
+                    });
+                }
+                return orders;
             }
-            return orders;
-        }
+            catch (OrderRepositoryException ex)
+            {
+                // Vang specifieke repository fouten op
+                throw new OrderServiceException("Fout bij ophalen van alle bestellingen.", ex);
+            }
+            catch (Exception ex)
+            {
+                // Vang overige onverwachte fouten op
+                throw new OrderServiceException("Onverwachte fout bij service.", ex);
+
+            }
+        } 
+
 
         public int AddOrder(Order order)
         {
@@ -44,13 +62,39 @@ namespace StockServe.Logic.Service
                 Paystatus = order.Paystatus
             };
 
-            _orderRepository.AddOrder(orderDto);
-            return orderDto.Id;
+            try
+            {
+                _orderRepository.AddOrder(orderDto);
+                return orderDto.Id;
+            }
+            catch (OrderRepositoryException ex)
+            {
+                // Vang specifieke repository fouten op
+                throw new OrderServiceException("Fout bij toevoegen van bestelling.", ex);
+            }
+            catch (Exception ex)
+            {
+                // Vang overige onverwachte fouten op
+                throw new OrderServiceException("Onverwachte fout bij service.", ex);
+            }
         }
 
         public void UpdatePaymentStatus(int tableId, string payStatus)
         {
-            _orderRepository.UpdatePaymentStatus(tableId, payStatus);
+            try
+            {
+                _orderRepository.UpdatePaymentStatus(tableId, payStatus);
+            }
+            catch (OrderRepositoryException ex)
+            {
+                // Vang specifieke repository fouten op
+                throw new OrderServiceException("Fout bij bijwerken van betalingsstatus.", ex);
+            }
+            catch (Exception ex)
+            {
+                // Vang overige onverwachte fouten op
+                throw new OrderServiceException("Onverwachte fout bij service.", ex);
+            }
         }
 
     }

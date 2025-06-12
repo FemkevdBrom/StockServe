@@ -21,7 +21,17 @@ builder.Services.AddScoped<TableService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<UserService>();
 
+// Error handeling Logger
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
+builder.Services.AddScoped<IOrderDishRepository, OrderDishRepository>();
+
+
 var app = builder.Build();
+
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

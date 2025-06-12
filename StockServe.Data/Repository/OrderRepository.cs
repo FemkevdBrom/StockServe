@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using Stockserve.Domain.Dto;
+using StockServe.Logic.InterfaceRepository;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
-using Stockserve.Domain.Dto;
-using StockServe.Logic.InterfaceRepository;
+using StockServe.Logic.Exceptions;
 
 namespace StockServe.Data.Repository
 {
@@ -44,8 +46,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error: {ex.Message}");
-                    // Je kunt hier ook logging toevoegen voor meer gedetailleerde foutmeldingen
+                    throw new OrderRepositoryException("Fout bij het ophalen van alle orders", ex);
                 }
             }
             return orders;
@@ -74,8 +75,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error adding order: {ex.Message}");
-                    throw;
+                    throw new OrderRepositoryException("Fout bij toevoegen van bestelling in de database.", ex);
                 }
             }
         }
@@ -101,8 +101,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error updating payment status: {ex.Message}");
-                    throw;
+                    throw new OrderRepositoryException($"Fout bij het updaten van betalingsstatus voor tafel {tableId}.", ex);
                 }
             }
         }

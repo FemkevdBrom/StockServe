@@ -43,8 +43,9 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error: {ex.Message}");
+                    Console.Error.WriteLine($"Fout bij het lezen van een dish: {ex.Message}");
                 }
+
             }
             return dishes;
         }

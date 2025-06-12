@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.data\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5EC824-6D53-484C-827D-73AE5C2D016D}|StockServe.Data\\StockServe.Data.csproj|solutionrelative:stockserve.data\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\exceptions\\orderserviceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\exceptions\\orderserviceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\exceptions\\orderrepositoryexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\exceptions\\orderrepositoryexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\fakerepository\\fakeorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\fakerepository\\fakeorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +34,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderServiceException.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Exceptions\\OrderServiceException.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\Exceptions\\OrderServiceException.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Exceptions\\OrderServiceException.cs",
+              "RelativeToolTip": "StockServe.Logic\\Exceptions\\OrderServiceException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:18:00.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderRepositoryException.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Exceptions\\OrderRepositoryException.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\Exceptions\\OrderRepositoryException.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Exceptions\\OrderRepositoryException.cs",
+              "RelativeToolTip": "StockServe.Logic\\Exceptions\\OrderRepositoryException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:17:42.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GerechtDashbord.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAuwPYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:56:38.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FakeOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\FakeRepository\\FakeOrderRepository.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\FakeRepository\\FakeOrderRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\FakeRepository\\FakeOrderRepository.cs",
+              "RelativeToolTip": "Stockserve.UnitTest\\FakeRepository\\FakeOrderRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAlwCIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:58:25.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Service\\OrderService.cs",
+              "RelativeToolTip": "StockServe.Logic\\Service\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:54:06.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\Repository\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "StockServe.Data\\Repository\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\Repository\\OrderRepository.cs",
+              "RelativeToolTip": "StockServe.Data\\Repository\\OrderRepository.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAYwGMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T11:52:24.263Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
