@@ -7,18 +7,15 @@ using Microsoft.Data.SqlClient;
 using Stockserve.Domain.Dto;
 using StockServe.Logic.InterfaceRepository;
 using Microsoft.Extensions.Logging;
+using StockServe.Logic.Exceptions;
+using System.Data;
 
 namespace StockServe.Data.Repository
 {
     public class OrderDishRepository : IOrderDishRepository
     {
         private string _connectionString = DatabaseConfig.GetConnectionString();
-        private readonly ILogger<OrderDishRepository> _logger;
 
-        public OrderDishRepository(ILogger<OrderDishRepository> logger)
-        {
-            _logger = logger;
-        }
 
         public List<OrderDishDto> GetOrderDishes()
         {
@@ -48,7 +45,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                   _logger.LogError(ex, $"Fout bij het lezen van order dishes:");
+                    throw new OrderDishRepositoryException("Fout bij het ophalen van alle order dishes", ex);
                 }
             }
             return orderDishes;
@@ -91,7 +88,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, $"Fout bij het lezen van order dishes voor tafel {tableId}:");
+                    throw new OrderDishRepositoryException($"Fout bij het ophalen van order dishes voor tafel {tableId}", ex);
                 }
             }
             return orderDishes;
@@ -118,7 +115,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, $"Fout bij het toevoegen van een order dish:");
+                    throw new OrderDishRepositoryException("Fout bij het ophalen van alle order dishes", ex);
                     throw;
                 }
             }
@@ -149,7 +146,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, $"Fout bij het updaten van de status van order dishes voor tafel {tableId}:");
+                    throw new OrderDishRepositoryException($"Fout bij het updaten van de status van order dishes voor tafel {tableId}", ex);
                     throw;
                 }
             }

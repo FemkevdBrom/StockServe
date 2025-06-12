@@ -109,6 +109,12 @@ namespace StockServe.Pages
                     Dishes = Dishes.Where(d => d.Category == SelectedCategory).ToList();
                 }
             }
+            catch (DishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+            }
             catch (Exception ex)
             {
                 ErrorMessage = $"Er is een fout opgetreden: {ex.Message}";
@@ -139,6 +145,13 @@ namespace StockServe.Pages
                 var currentCategory = HttpContext.Session.GetString(SelectedCategoryKey) ?? "Alle gerechten";
                 return RedirectToPage(new { tableId = TableId, category = currentCategory });
             }
+            catch (DishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
             catch (Exception ex)
             {
                 ErrorMessage = $"Er is een fout opgetreden bij het toevoegen van het gerecht: {ex.Message}";
@@ -149,51 +162,73 @@ namespace StockServe.Pages
 
         public IActionResult OnPostSetOptionType(string optionType)
         {
-            CurrentOption = optionType;
-            LoadTableId();
-
-            // Haal geselecteerde gerechten op uit de sessie
-            var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
-            if (!string.IsNullOrEmpty(selectedDishesJson))
+            try
             {
-                SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
-            }
-            else
-            {
-                SelectedDishes = new List<Dish>();
-            }
+                CurrentOption = optionType;
+                LoadTableId();
 
-            // Als Rekening of Betalen is geselecteerd, haal de bestelde gerechten op
-            if (optionType == "Rekening" || optionType == "Betalen")
-            {
-                var orderDishService = _orderDishService;
-                TableOrderDishes = orderDishService.GetOrderDishesForTable(TableId);
-            }
+                // Haal geselecteerde gerechten op uit de sessie
+                var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
+                if (!string.IsNullOrEmpty(selectedDishesJson))
+                {
+                    SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
+                }
+                else
+                {
+                    SelectedDishes = new List<Dish>();
+                }
 
-            // Gerechten ophalen uit de database
-            
-            Dishes = _dishService.GetAllDishes();
+                // Als Rekening of Betalen is geselecteerd, haal de bestelde gerechten op
+                if (optionType == "Rekening" || optionType == "Betalen")
+                {
+                    var orderDishService = _orderDishService;
+                    TableOrderDishes = orderDishService.GetOrderDishesForTable(TableId);
+                }
 
-            if (Dishes == null || !Dishes.Any())
-            {
-                ErrorMessage = "Geen gerechten gevonden in de database.";
+                // Gerechten ophalen uit de database
+
+                Dishes = _dishService.GetAllDishes();
+
+                if (Dishes == null || !Dishes.Any())
+                {
+                    ErrorMessage = "Geen gerechten gevonden in de database.";
+                    return Page();
+                }
+
+                // Voeg 'Alle gerechten' als eerste item in de lijst
+                Categories = Dishes.Select(d => d.Category).Distinct().ToList();
+                Categories.Insert(0, "Alle gerechten");
+
+                // Haal de geselecteerde categorie op uit de sessie
+                SelectedCategory = HttpContext.Session.GetString(SelectedCategoryKey) ?? "Alle gerechten";
+
+                // Filter op categorie als er een is geselecteerd, behalve als 'Alle gerechten' geselecteerd is
+                if (SelectedCategory != "Alle gerechten")
+                {
+                    Dishes = Dishes.Where(d => d.Category == SelectedCategory).ToList();
+                }
+
                 return Page();
             }
-
-            // Voeg 'Alle gerechten' als eerste item in de lijst
-            Categories = Dishes.Select(d => d.Category).Distinct().ToList();
-            Categories.Insert(0, "Alle gerechten");
-
-            // Haal de geselecteerde categorie op uit de sessie
-            SelectedCategory = HttpContext.Session.GetString(SelectedCategoryKey) ?? "Alle gerechten";
-
-            // Filter op categorie als er een is geselecteerd, behalve als 'Alle gerechten' geselecteerd is
-            if (SelectedCategory != "Alle gerechten")
+            catch (DishServiceException ex)
             {
-                Dishes = Dishes.Where(d => d.Category == SelectedCategory).ToList();
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
             }
-
-            return Page();
+            catch (OrderDishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het instellen van de optie: {ex.Message}";
+                return Page();
+            }
         }
 
         public IActionResult OnPostNaarTafelDashbord()
@@ -220,6 +255,16 @@ namespace StockServe.Pages
                 
                 return RedirectToPage("/TafelDashbord", new { tableId = TableId });
             }
+            catch (OrderDishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                return Page();
+            }
+            catch (OrderServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                return Page();
+            }
             catch (Exception ex)
             {
                 ErrorMessage = $"Er is een fout opgetreden bij het verwerken van de cash betaling: {ex.Message}";
@@ -234,14 +279,28 @@ namespace StockServe.Pages
             {
                 var orderService = _orderService;
                 var orderDishService = _orderDishService;
-                
+
                 // Update order dish status to 'Betaald'
                 orderDishService.UpdateOrderDishStatus(TableId, "Betaald");
-                
+
                 // Update order payment status
                 orderService.UpdatePaymentStatus(TableId, "Betaald Pin");
-                
+
                 return RedirectToPage("/TafelDashbord", new { tableId = TableId });
+            }
+            catch (OrderDishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
+            catch (OrderServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
             }
             catch (Exception ex)
             {
@@ -249,6 +308,7 @@ namespace StockServe.Pages
                 return Page();
             }
         }
+
 
         public IActionResult OnPostBestellingToevoegen()
         {
@@ -336,6 +396,20 @@ namespace StockServe.Pages
                     Console.WriteLine("Error: Geen gerechten geselecteerd");
                     return Page();
                 }
+            }
+            catch (DishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
+            catch (OrderDishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
             }
             catch (OrderServiceException ex)
             {

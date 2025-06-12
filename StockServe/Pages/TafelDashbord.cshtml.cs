@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using StockServe.Logic.Service;
 using Stockserve.Domain.Model;
 using Stockserve.Domain.Dto;
+using StockServe.Logic.Exceptions;
 
 namespace StockServe.Pages
 {
@@ -11,6 +12,7 @@ namespace StockServe.Pages
         private readonly TableService _tableService;
 
         public IList<Table>? Tables { get; set; }
+        public string? ErrorMessage { get; set; }
 
         public TafelDashbordModel(TableService tableService)
         {
@@ -19,7 +21,18 @@ namespace StockServe.Pages
 
         public void OnGet()
         {
-            Tables = _tableService.GetAllTables();
+            try
+            {
+                Tables = _tableService.GetAllTables();
+            }
+            catch (TableServiceException ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het ophalen van de tafels:{ex.Message} ";
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het ophalen van de tafels:{ex.Message} ";
+            }
         }
 
         public IActionResult OnPostGerechtDashbord()

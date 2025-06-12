@@ -8,6 +8,12 @@
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col-md-6 bg-secondary text-center rounded p-5">
             <h1 class="display-4">Welkom bij StockServe,</h1>
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="alert alert-danger">
+                    @Model.ErrorMessage
+                </div>
+            }
             <p>Log hier met uw gegevens in</p>
             <form method="post">
                 <div class="mb-3">

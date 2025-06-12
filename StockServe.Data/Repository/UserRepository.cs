@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Stockserve.Domain.Dto;
 using Microsoft.Data.SqlClient;
 using StockServe.Logic.InterfaceRepository;
+using StockServe.Logic.Exceptions;
 
 namespace StockServe.Data.Repository
 {
@@ -44,7 +45,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error during login: " + ex.Message);
+                    throw new UserRepositoryException("Fout bij het ophalen van gebruiker met email en wachtwoord", ex);
                 }
             }
 

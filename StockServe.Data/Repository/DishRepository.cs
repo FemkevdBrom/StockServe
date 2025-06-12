@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Stockserve.Domain.Dto;
 using StockServe.Logic.InterfaceRepository;
+using StockServe.Logic.Exceptions;
 
 namespace StockServe.Data.Repository
 {
@@ -43,7 +44,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.Error.WriteLine($"Fout bij het lezen van een dish: {ex.Message}");
+                    throw new DishRepositoryException ("Fout bij het ophalen van alle gerechten", ex);
                 }
 
             }
@@ -67,7 +68,7 @@ namespace StockServe.Data.Repository
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error checking if dish exists: {ex.Message}");
+                    throw new DishRepositoryException("Fout bij het controleren of gerecht bestaat", ex);
                     return false;
                 }
             }
