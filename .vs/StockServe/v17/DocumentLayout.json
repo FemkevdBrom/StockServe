@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\dishservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\dishservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\orderservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\orderservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\orderdishservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\orderdishservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\tableservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\tableservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\fakerepository\\faketablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\fakerepository\\faketablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|solutionrelative:stockserve.logic\\service\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4E32FD5-BE5D-4FCE-91C3-B088CEC208A6}|StockServe\\StockServe.csproj|solutionrelative:stockserve\\pages\\gerechtdashbord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,27 +47,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GerechtDashbord.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
-              "ViewState": "AgIAALMBAAAAAAAAAAAiwMcBAAAVAAAAAAAAAA==",
+              "Title": "DishServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\DishServiceTest.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\DishServiceTest.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\DishServiceTest.cs*",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\DishServiceTest.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T20:10:29.923Z",
+              "WhenOpened": "2025-06-13T08:19:05.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TafelDashbord.cshtml",
-              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\TafelDashbord.cshtml",
-              "RelativeDocumentMoniker": "StockServe\\Pages\\TafelDashbord.cshtml",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\TafelDashbord.cshtml",
-              "RelativeToolTip": "StockServe\\Pages\\TafelDashbord.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T20:07:23.701Z",
+              "DocumentIndex": 2,
+              "Title": "OrderDishServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\OrderDishServiceTest.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\OrderDishServiceTest.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\OrderDishServiceTest.cs",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\OrderDishServiceTest.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T08:06:55.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TableServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:53:36.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FakeTableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\FakeRepository\\FakeTableRepository.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\FakeRepository\\FakeTableRepository.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\FakeRepository\\FakeTableRepository.cs",
+              "RelativeToolTip": "Stockserve.UnitTest\\FakeRepository\\FakeTableRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:51:45.327Z",
               "EditorCaption": ""
             },
             {
@@ -53,6 +103,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\OrderServiceTest.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\OrderServiceTest.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\OrderServiceTest.cs",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\OrderServiceTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T22:15:44.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Service\\OrderService.cs",
+              "RelativeDocumentMoniker": "StockServe.Logic\\Service\\OrderService.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Service\\OrderService.cs",
+              "RelativeToolTip": "StockServe.Logic\\Service\\OrderService.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAuwGgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T22:06:16.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GerechtDashbord.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "RelativeDocumentMoniker": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "RelativeToolTip": "StockServe\\Pages\\GerechtDashbord.cshtml.cs",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAcwNUBAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T20:10:29.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TafelDashbord.cshtml",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\TafelDashbord.cshtml",
+              "RelativeDocumentMoniker": "StockServe\\Pages\\TafelDashbord.cshtml",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\TafelDashbord.cshtml",
+              "RelativeToolTip": "StockServe\\Pages\\TafelDashbord.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T20:07:23.701Z",
+              "EditorCaption": ""
             }
           ]
         }

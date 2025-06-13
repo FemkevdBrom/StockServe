@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Stockserve.Domain.Dto;
 using StockServe.Logic.Service;
-using Stockserve.UnitTest.FakeRepository;
+using StockServe.Logic.InterfaceRepository;
+using Moq;
 
 
 namespace Stockserve.UnitTest.Test
@@ -14,20 +15,33 @@ namespace Stockserve.UnitTest.Test
     [TestClass]
     public class OrderDishServiceTest
     {
+        private Mock<IOrderDishRepository> _mockOrderDishRepo;
         private OrderDishService _orderDishService;
-        private FakeOrderDishRepository _fakeRepo;
 
         [TestInitialize]
         public void Setup()
         {
-            _fakeRepo = new FakeOrderDishRepository();
-            _orderDishService = new OrderDishService(_fakeRepo);
+            _mockOrderDishRepo = new Mock<IOrderDishRepository>();
+            _orderDishService = new OrderDishService(_mockOrderDishRepo.Object);
+
         }
         [TestMethod]
         public void GetOrderDishes_ShouldReturnAllOrderDishes()
         {
+            // Arrange
+            var orderDishes = new List<OrderDishDto>
+            {
+                new OrderDishDto { OrderId = 1, DishId = 101, Amount = 2 },
+                new OrderDishDto { OrderId = 2, DishId = 102, Amount = 1 },
+                new OrderDishDto { OrderId = 3, DishId = 103, Amount = 1 },
+                new OrderDishDto { OrderId = 4, DishId = 104, Amount = 2 }
+            };
+
+            _mockOrderDishRepo.Setup(repo => repo.GetOrderDishes()).Returns(orderDishes);
+
             // Act
             var result = _orderDishService.GetOrderDishes();
+
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(4, result.Count);
@@ -36,9 +50,21 @@ namespace Stockserve.UnitTest.Test
 
         public void GetOrderDishesForTable_ValidTableId_ShouldReturnGroupedActiveUnpaidDishes()
         {
-            //act
-            var result = _orderDishService.GetOrderDishesForTable(5);
-            //assert
+            // Arrange
+            var tableId = 5;
+            var orderDishes = new List<OrderDishDto>
+            {
+                new OrderDishDto { OrderId = 1, DishId = 101, Amount = 2, Status = "Actief"},
+                new OrderDishDto { OrderId = 2, DishId = 102, Amount = 1, Status = "Actief" },
+                new OrderDishDto { OrderId = 3, DishId = 103, Amount = 1, Status = "Betaald"}
+            };
+
+            _mockOrderDishRepo.Setup(repo => repo.GetOrderDishesForTable(tableId)).Returns(orderDishes);
+
+            // Act
+            var result = _orderDishService.GetOrderDishesForTable(tableId);
+
+            // Assert
             Assert.AreEqual(2, result.Count);
             Assert.IsTrue(result.Any(d => d.DishId == 101 && d.Amount == 2));
             Assert.IsTrue(result.Any(d => d.DishId == 102 && d.Amount == 1));
@@ -47,8 +73,12 @@ namespace Stockserve.UnitTest.Test
         [TestMethod]
         public void GetOrderDishesForTable_InvalidTableId_ShouldReturnEmptyList()
         {
+            // Arrange
+            _mockOrderDishRepo.Setup(repo => repo.GetOrderDishesForTable(999)).Returns(new List<OrderDishDto>());
+
             // Act
             var result = _orderDishService.GetOrderDishesForTable(999);
+
             // Assert
             Assert.AreEqual(0, result.Count);
         }
@@ -66,22 +96,20 @@ namespace Stockserve.UnitTest.Test
             // Act
             _orderDishService.AddOrderDish(newDish);
             // Assert
-            var result = _orderDishService.GetOrderDishes();
-            Assert.IsTrue(result.Any(d => d.OrderId == 5 && d.DishId == 4 && d.Amount == 3));
+            _mockOrderDishRepo.Verify(repo => repo.AddOrderDish(newDish), Times.Once);
         }
+
 
         [TestMethod]
         public void UpdateOrderDishStatus_ShouldChangeStatusForMatchingDishes()
         {
             // arrange
-            _orderDishService.UpdateOrderDishStatus(5, "Betaald");
+            int tableId = 5;
+            string Status = "Betaald";
             // act
-            var updated = _fakeRepo
-                .GetOrderDishes()
-                .Where(od => (od.OrderId == 1 || od.OrderId == 2) && od.Status == "Betaald")
-                .ToList();
+            _orderDishService.UpdateOrderDishStatus(tableId, Status);
             // Assert
-            Assert.AreEqual(2, updated.Count);
+            _mockOrderDishRepo.Verify(repo => repo.UpdateOrderDishStatus(tableId, Status), Times.Once);
         }
     }
 }

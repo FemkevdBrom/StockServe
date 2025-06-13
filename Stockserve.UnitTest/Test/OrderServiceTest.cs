@@ -1,33 +1,48 @@
-﻿using StockServe.Logic.Service;
-using Stockserve.UnitTest.FakeRepository;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Stockserve.Domain.Dto;
+using StockServe.Logic.Service;
+using StockServe.Logic.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Stockserve.Domain.Model;
+using Moq;
+using StockServe.Logic.InterfaceRepository;
+
 
 namespace Stockserve.UnitTest.Test
 {
     [TestClass]
     public class OrderServiceTest
     {
+        private Mock<IOrderRepository> _mockOrderRepo;
         private OrderService _orderService;
 
         [TestInitialize]
         public void Setup()
         {
-            var fakeRepo = new FakeOrderRepository();
-            _orderService = new OrderService(fakeRepo);
+            _mockOrderRepo = new Mock<IOrderRepository>();
+            _orderService = new OrderService(_mockOrderRepo.Object);
+            
         }
-
         [TestMethod]
         public void GetAllOrders_ShouldReturnAllOrders()
         {
+            // Arrange
+            var OrderDtos = new List<OrderDto>
+            {
+                new OrderDto { Id = 1, TableId = 10, Time = DateTime.Now.AddMinutes(-10), Price = 20.5m, Paystatus = "Nog niet betaald" },
+                new OrderDto { Id = 2, TableId = 10, Time = DateTime.Now.AddMinutes(-5), Price = 15.0m, Paystatus = "Betaald Pin" },
+                new OrderDto { Id = 3, TableId = 11, Time = DateTime.Now, Price = 30.0m, Paystatus = "Nog niet betaald" },
+                new OrderDto { Id = 4, TableId = 12, Time = DateTime.Now.AddMinutes(-2), Price = 25.0m, Paystatus = "Betaald Cash" },
+                new OrderDto { Id = 5, TableId = 13, Time = DateTime.Now.AddMinutes(-1), Price = 10.0m, Paystatus = "Nog niet betaald" }
+            };
+            _mockOrderRepo.Setup(r => r.GetAllOrders()).Returns(OrderDtos);
             // Act
             var orders = _orderService.GetAllOrders();
             // Assert
-            Assert.IsNotNull(orders);
             Assert.AreEqual(5, orders.Count);
         }
 
@@ -42,27 +57,80 @@ namespace Stockserve.UnitTest.Test
                 Price = 42.5m,
                 Paystatus = "Nog niet betaald"
             };
+            var addOrderId = 6; // Simulated ID for the new order
+            _mockOrderRepo.Setup(r => r.AddOrder(It.IsAny<OrderDto>())).Callback<OrderDto>(o => o.Id = addOrderId);
 
             // Act
-            int newId = _orderService.AddOrder(newOrder);
-            var result = _orderService.GetAllOrders();
+            int resultId = _orderService.AddOrder(newOrder);
 
             // Assert
-            Assert.IsTrue(result.Any(o => o.Id == newId && o.TableId == 12 && o.Price == 42.5m));
+            Assert.AreEqual(addOrderId, resultId);
         }
 
         [TestMethod]
         public void UpdatePaymentStatus_ShouldUpdateCorrectOrders()
         {
+            // Arrange
+            int  tableId = 10;
+            string Status = "Betaald Pin";
             // Act
-            _orderService.UpdatePaymentStatus(10, "Betaald Cash");
+
+            _orderService.UpdatePaymentStatus(tableId, Status);
 
             // Assert
-            var result = _orderService.GetAllOrders();
-            var table10Orders = result.Where(o => o.TableId == 10).ToList();
+            _mockOrderRepo.Verify(r => r.UpdatePaymentStatus(tableId, Status), Times.Once);
+        }
 
-            Assert.AreEqual("Betaald Cash", table10Orders.First(o => o.Id == 1).Paystatus);
-            Assert.AreEqual("Betaald Pin", table10Orders.First(o => o.Id == 2).Paystatus); // already was "Betaald"
+        [TestMethod]
+        [ExpectedException(typeof(OrderServiceException))]
+        public void AddOrder_InvalidTableId_ShouldThrowException()
+        {
+            // Arrange
+            var invalidOrder = new Order
+            {
+                TableId = -1, // Invalid table ID
+                Time = DateTime.Now,
+                Price = 10.0m,
+                Paystatus = "Nog niet betaald"
+            };
+            // Act
+            _orderService.AddOrder(invalidOrder);
+            // Assert is handled by ExpectedException
+        }
+        [TestMethod]
+        [ExpectedException(typeof(OrderServiceException))]
+        public void AddOrder_InvalidPrice_ShouldThrowException()
+        {
+            // Arrange
+            var invalidOrder = new Order
+            {
+                TableId = 1,
+                Time = DateTime.Now,
+                Price = -10.0m, // Invalid price
+                Paystatus = "Nog niet betaald"
+            };
+            // Act
+            _orderService.AddOrder(invalidOrder);
+            // Assert is handled by ExpectedException
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(OrderServiceException))]
+        public void AddOrder_RepositoryThrowsException_ShouldThrowServiceException()
+        {
+            // Arrange
+            var validOrder = new Order
+            {
+                TableId = 1,
+                Time = DateTime.Now,
+                Price = 10.0m,
+                Paystatus = "Nog niet betaald"
+            };
+            _mockOrderRepo.Setup(r => r.AddOrder(It.IsAny<OrderDto>())).Throws(new OrderRepositoryException("Repository error", new Exception()));
+            // Act
+            _orderService.AddOrder(validOrder);
+            // Assert is handled by ExpectedException
         }
     }
+
 }

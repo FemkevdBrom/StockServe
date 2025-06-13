@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Stockserve.UnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a89d4d5031227703762fe9404c133d106d8498b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c3a26791be73e1d1823d2e15e7d1cbab97a3638")]
 [assembly: System.Reflection.AssemblyProductAttribute("Stockserve.UnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Stockserve.UnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

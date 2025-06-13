@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 
 namespace StockServe.Logic.Service
@@ -49,21 +50,23 @@ namespace StockServe.Logic.Service
                 throw new OrderServiceException("Onverwachte fout bij service.", ex);
 
             }
-        } 
+        }
 
 
         public int AddOrder(Order order)
         {
-            var orderDto = new OrderDto
-            {
-                TableId = order.TableId,
-                Time = order.Time,
-                Price = order.Price,
-                Paystatus = order.Paystatus
-            };
-
             try
-            {
+            { 
+                ValidateOrder(order);
+                
+                var orderDto = new OrderDto
+                {
+                    TableId = order.TableId,
+                    Time = order.Time,
+                    Price = order.Price,
+                    Paystatus = order.Paystatus
+                };
+
                 _orderRepository.AddOrder(orderDto);
                 return orderDto.Id;
             }
@@ -97,6 +100,26 @@ namespace StockServe.Logic.Service
             }
         }
 
+        private void ValidateOrder(Order order)
+        {
+            if (order == null)
+            {
+                throw new ArgumentNullException(nameof(order), "Order mag niet null zijn.");
+            }
+            if (order.TableId <= 0)
+            {
+                throw new ArgumentException("TableId moet groter zijn dan 0.", nameof(order.TableId));
+            }
+            if (order.Price <= 0)
+            {
+                throw new ArgumentException("Price mag niet nul of negatief zijn.", nameof(order.Price));
+            }
+            if (string.IsNullOrEmpty(order.Paystatus))
+            {
+                throw new ArgumentException("Paystatus mag niet leeg zijn.", nameof(order.Paystatus));
+            }
+
+        }
     }
 }
 
