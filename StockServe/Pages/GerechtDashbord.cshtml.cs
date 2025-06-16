@@ -212,9 +212,9 @@ namespace StockServe.Pages
             }
             catch (DishServiceException ex)
             {
-                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
-                Console.WriteLine(ErrorMessage);
-                Console.WriteLine(ex.StackTrace);
+                    ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                    Console.WriteLine(ErrorMessage);
+                    Console.WriteLine(ex.StackTrace);
                 return Page();
             }
             catch (OrderDishServiceException ex)

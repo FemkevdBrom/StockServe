@@ -258,3 +258,13 @@ C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Sinks.File.dll

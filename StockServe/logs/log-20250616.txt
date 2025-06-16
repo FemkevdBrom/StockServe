@@ -1,0 +1,499 @@
+2025-06-16 14:18:36.916 +02:00 [INF] User profile is available. Using 'C:\Users\femke\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-16 14:18:37.365 +02:00 [INF] Now listening on: https://localhost:7103
+2025-06-16 14:18:37.365 +02:00 [INF] Now listening on: http://localhost:5103
+2025-06-16 14:18:37.389 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-16 14:18:37.389 +02:00 [INF] Hosting environment: Development
+2025-06-16 14:18:37.389 +02:00 [INF] Content root path: C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe
+2025-06-16 14:18:38.666 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/ - null null
+2025-06-16 14:18:38.897 +02:00 [INF] Executing endpoint '/Index'
+2025-06-16 14:18:38.958 +02:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-06-16 14:18:38.971 +02:00 [INF] Executing handler method StockServe.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-06-16 14:18:38.972 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:38.975 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-16 14:18:38.975 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:39.041 +02:00 [INF] Executed page /Index in 80.2281ms
+2025-06-16 14:18:39.041 +02:00 [INF] Executed endpoint '/Index'
+2025-06-16 14:18:39.045 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/ - 200 null text/html; charset=utf-8 387.354ms
+2025-06-16 14:18:39.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:39.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:39.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:39.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:39.065 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:39.108 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:39.109 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:39.161 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:39.251 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.251 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.251 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.251 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.251 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.251 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.252 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 187.0584ms
+2025-06-16 14:18:39.420 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:39.420 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:39.420 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.420 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.420 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 355.1392ms
+2025-06-16 14:18:39.420 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 355.642ms
+2025-06-16 14:18:39.424 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:39.424 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.424 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 315.3804ms
+2025-06-16 14:18:39.442 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:39.442 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.442 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 377.5579ms
+2025-06-16 14:18:39.491 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:39.491 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.492 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 383.4947ms
+2025-06-16 14:18:39.526 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:39.527 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:39.527 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 461.9967ms
+2025-06-16 14:18:39.697 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 536.1019ms
+2025-06-16 14:18:46.845 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/ - application/x-www-form-urlencoded 229
+2025-06-16 14:18:46.852 +02:00 [INF] Executing endpoint '/Index'
+2025-06-16 14:18:46.852 +02:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-06-16 14:18:46.892 +02:00 [INF] Executing handler method StockServe.Pages.IndexModel.OnPost - ModelState is "Valid"
+2025-06-16 14:18:47.737 +02:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2025-06-16 14:18:47.773 +02:00 [INF] Executing RedirectToPageResult, redirecting to /Keuzepagina.
+2025-06-16 14:18:47.773 +02:00 [INF] Executed page /Index in 921.0111ms
+2025-06-16 14:18:47.773 +02:00 [INF] Executed endpoint '/Index'
+2025-06-16 14:18:47.774 +02:00 [INF] Session started; Key:bfa99921-535e-cb38-b474-abb4005a20a3, Id:12e837a3-9160-3303-3aa7-3e3f07ceacf4
+2025-06-16 14:18:47.778 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/ - 302 0 null 933.407ms
+2025-06-16 14:18:47.785 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/Keuzepagina - null null
+2025-06-16 14:18:47.798 +02:00 [INF] Executing endpoint '/Keuzepagina'
+2025-06-16 14:18:47.809 +02:00 [INF] Route matched with {page = "/Keuzepagina"}. Executing page /Keuzepagina
+2025-06-16 14:18:47.810 +02:00 [INF] Executing handler method StockServe.Pages.KeuzepaginaModel.OnGet - ModelState is "Valid"
+2025-06-16 14:18:47.819 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:47.820 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-16 14:18:47.820 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:47.847 +02:00 [INF] Executed page /Keuzepagina in 37.5097ms
+2025-06-16 14:18:47.847 +02:00 [INF] Executed endpoint '/Keuzepagina'
+2025-06-16 14:18:47.848 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/Keuzepagina - 200 null text/html; charset=utf-8 62.6314ms
+2025-06-16 14:18:47.873 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:47.875 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:47.877 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:47.877 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:47.878 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.879 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:47.879 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.881 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.882 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:47.882 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.882 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 5.0729ms
+2025-06-16 14:18:47.882 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:47.883 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:47.883 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:47.885 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.886 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 10.9572ms
+2025-06-16 14:18:47.886 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 9.392ms
+2025-06-16 14:18:47.886 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:47.892 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.895 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:47.895 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.895 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 22.8386ms
+2025-06-16 14:18:47.897 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:47.897 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.897 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 14.3827ms
+2025-06-16 14:18:47.936 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.966 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:47.966 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.967 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 88.0172ms
+2025-06-16 14:18:47.968 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.5415ms
+2025-06-16 14:18:47.981 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.986 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:47.986 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:47.987 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 104.3796ms
+2025-06-16 14:18:51.394 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/Keuzepagina?handler=Tafeldashbord - application/x-www-form-urlencoded 182
+2025-06-16 14:18:51.400 +02:00 [INF] Executing endpoint '/Keuzepagina'
+2025-06-16 14:18:51.400 +02:00 [INF] Route matched with {page = "/Keuzepagina"}. Executing page /Keuzepagina
+2025-06-16 14:18:51.414 +02:00 [INF] Executing handler method StockServe.Pages.KeuzepaginaModel.OnPostTafeldashbord - ModelState is "Valid"
+2025-06-16 14:18:51.416 +02:00 [INF] Executed handler method OnPostTafeldashbord, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2025-06-16 14:18:51.416 +02:00 [INF] Executing RedirectToPageResult, redirecting to /TafelDashbord.
+2025-06-16 14:18:51.417 +02:00 [INF] Executed page /Keuzepagina in 15.9469ms
+2025-06-16 14:18:51.417 +02:00 [INF] Executed endpoint '/Keuzepagina'
+2025-06-16 14:18:51.417 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/Keuzepagina?handler=Tafeldashbord - 302 0 null 22.8968ms
+2025-06-16 14:18:51.422 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/TafelDashbord - null null
+2025-06-16 14:18:51.426 +02:00 [INF] Executing endpoint '/TafelDashbord'
+2025-06-16 14:18:51.435 +02:00 [INF] Route matched with {page = "/TafelDashbord"}. Executing page /TafelDashbord
+2025-06-16 14:18:51.438 +02:00 [INF] Executing handler method StockServe.Pages.TafelDashbordModel.OnGet - ModelState is "Valid"
+2025-06-16 14:18:51.532 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:51.532 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-16 14:18:51.532 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:51.539 +02:00 [INF] Executed page /TafelDashbord in 104.4108ms
+2025-06-16 14:18:51.540 +02:00 [INF] Executed endpoint '/TafelDashbord'
+2025-06-16 14:18:51.540 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/TafelDashbord - 200 null text/html; charset=utf-8 117.9147ms
+2025-06-16 14:18:51.561 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:51.561 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:51.561 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:51.562 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.562 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.562 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:51.562 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.562 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:51.563 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.563 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:51.564 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.565 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:51.565 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:51.565 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.566 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.566 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 4.5823ms
+2025-06-16 14:18:51.567 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:51.567 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.567 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 5.9641ms
+2025-06-16 14:18:51.569 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 4.452ms
+2025-06-16 14:18:51.570 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:51.570 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.570 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 5.5865ms
+2025-06-16 14:18:51.568 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:51.570 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.570 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:51.570 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 8.3228ms
+2025-06-16 14:18:51.571 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:51.571 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.571 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 8.0634ms
+2025-06-16 14:18:51.572 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:51.572 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:51.572 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 11.6183ms
+2025-06-16 14:18:51.578 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.9229ms
+2025-06-16 14:18:52.320 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1 - null null
+2025-06-16 14:18:52.323 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:52.341 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:52.365 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnGet - ModelState is "Invalid"
+2025-06-16 14:18:52.415 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:52.416 +02:00 [INF] Executing an implicit handler method - ModelState is "Invalid"
+2025-06-16 14:18:52.416 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:52.506 +02:00 [INF] Executed page /GerechtDashbord in 164.8446ms
+2025-06-16 14:18:52.506 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:52.507 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1 - 200 null text/html; charset=utf-8 187.5197ms
+2025-06-16 14:18:52.532 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:52.533 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.536 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:52.537 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:52.537 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.537 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.539 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:52.539 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.539 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 2.7005ms
+2025-06-16 14:18:52.541 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:52.541 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.541 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 4.6955ms
+2025-06-16 14:18:52.543 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:52.544 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.544 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 11.5992ms
+2025-06-16 14:18:52.547 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:52.547 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:52.547 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:52.548 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:52.548 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.548 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.548 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.549 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:52.550 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 2.6076ms
+2025-06-16 14:18:52.550 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:52.550 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.550 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 2.2109ms
+2025-06-16 14:18:52.552 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:52.552 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.552 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 5.4264ms
+2025-06-16 14:18:52.555 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:52.555 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:52.555 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 7.5123ms
+2025-06-16 14:18:52.559 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.3987ms
+2025-06-16 14:18:53.409 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=AddToOrder - application/x-www-form-urlencoded 191
+2025-06-16 14:18:53.415 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.415 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:53.419 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnPostAddToOrder - ModelState is "Invalid"
+2025-06-16 14:18:53.468 +02:00 [INF] Executed handler method OnPostAddToOrder, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2025-06-16 14:18:53.470 +02:00 [INF] Executing RedirectToPageResult, redirecting to null.
+2025-06-16 14:18:53.471 +02:00 [INF] Executed page /GerechtDashbord in 55.8982ms
+2025-06-16 14:18:53.471 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.471 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=AddToOrder - 302 0 null 62.6014ms
+2025-06-16 14:18:53.481 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1&category=Alle%20gerechten - null null
+2025-06-16 14:18:53.484 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.484 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:53.495 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnGet - ModelState is "Invalid"
+2025-06-16 14:18:53.503 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:53.503 +02:00 [INF] Executing an implicit handler method - ModelState is "Invalid"
+2025-06-16 14:18:53.503 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:53.515 +02:00 [INF] Executed page /GerechtDashbord in 31.5065ms
+2025-06-16 14:18:53.516 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.516 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1&category=Alle%20gerechten - 200 null text/html; charset=utf-8 34.6332ms
+2025-06-16 14:18:53.556 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:53.557 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:53.557 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:53.557 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.557 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 0.4738ms
+2025-06-16 14:18:53.557 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:53.558 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.559 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.560 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:53.561 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.562 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:53.562 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.562 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 5.6142ms
+2025-06-16 14:18:53.562 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:53.563 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:53.563 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.563 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:53.563 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 5.9114ms
+2025-06-16 14:18:53.563 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.564 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:53.564 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.569 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:53.569 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.569 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 5.6611ms
+2025-06-16 14:18:53.570 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:53.570 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.579 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 22.9477ms
+2025-06-16 14:18:53.579 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:53.580 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.580 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 19.7907ms
+2025-06-16 14:18:53.580 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:53.580 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:53.580 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 17.9254ms
+2025-06-16 14:18:53.585 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.652ms
+2025-06-16 14:18:53.948 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=AddToOrder - application/x-www-form-urlencoded 191
+2025-06-16 14:18:53.951 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.951 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:53.951 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnPostAddToOrder - ModelState is "Invalid"
+2025-06-16 14:18:53.977 +02:00 [INF] Executed handler method OnPostAddToOrder, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2025-06-16 14:18:53.977 +02:00 [INF] Executing RedirectToPageResult, redirecting to null.
+2025-06-16 14:18:53.977 +02:00 [INF] Executed page /GerechtDashbord in 26.6034ms
+2025-06-16 14:18:53.977 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.978 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=AddToOrder - 302 0 null 29.68ms
+2025-06-16 14:18:53.984 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1&category=Alle%20gerechten - null null
+2025-06-16 14:18:53.986 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.986 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:53.987 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnGet - ModelState is "Invalid"
+2025-06-16 14:18:53.989 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:53.989 +02:00 [INF] Executing an implicit handler method - ModelState is "Invalid"
+2025-06-16 14:18:53.989 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:53.995 +02:00 [INF] Executed page /GerechtDashbord in 9.0753ms
+2025-06-16 14:18:53.995 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:53.995 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1&category=Alle%20gerechten - 200 null text/html; charset=utf-8 11.4322ms
+2025-06-16 14:18:54.022 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:54.022 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:54.022 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:54.022 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:54.023 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.023 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.023 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:54.023 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:54.023 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:54.023 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.024 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 1.0869ms
+2025-06-16 14:18:54.024 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.024 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.024 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.041 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:54.042 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:54.054 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.054 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 32.1326ms
+2025-06-16 14:18:54.056 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:54.056 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.056 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 33.1805ms
+2025-06-16 14:18:54.056 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:54.057 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.057 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 35.2525ms
+2025-06-16 14:18:54.071 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:54.071 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.071 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 48.7217ms
+2025-06-16 14:18:54.071 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:54.071 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.071 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 49.6173ms
+2025-06-16 14:18:54.083 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.5974ms
+2025-06-16 14:18:54.089 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:54.089 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:54.089 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 66.5449ms
+2025-06-16 14:18:55.394 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=BestellingToevoegen - application/x-www-form-urlencoded 182
+2025-06-16 14:18:55.396 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:55.396 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:55.397 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnPostBestellingToevoegen - ModelState is "Invalid"
+2025-06-16 14:18:55.513 +02:00 [INF] Executed handler method OnPostBestellingToevoegen, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2025-06-16 14:18:55.514 +02:00 [INF] Executing RedirectToPageResult, redirecting to /TafelDashbord.
+2025-06-16 14:18:55.514 +02:00 [INF] Executed page /GerechtDashbord in 117.431ms
+2025-06-16 14:18:55.514 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:55.514 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=BestellingToevoegen - 302 0 null 119.7701ms
+2025-06-16 14:18:55.519 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/TafelDashbord?tableId=1 - null null
+2025-06-16 14:18:55.522 +02:00 [INF] Executing endpoint '/TafelDashbord'
+2025-06-16 14:18:55.522 +02:00 [INF] Route matched with {page = "/TafelDashbord"}. Executing page /TafelDashbord
+2025-06-16 14:18:55.522 +02:00 [INF] Executing handler method StockServe.Pages.TafelDashbordModel.OnGet - ModelState is "Valid"
+2025-06-16 14:18:55.580 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:55.580 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-16 14:18:55.580 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:55.581 +02:00 [INF] Executed page /TafelDashbord in 58.8353ms
+2025-06-16 14:18:55.581 +02:00 [INF] Executed endpoint '/TafelDashbord'
+2025-06-16 14:18:55.581 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/TafelDashbord?tableId=1 - 200 null text/html; charset=utf-8 62.2613ms
+2025-06-16 14:18:55.607 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:55.607 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:55.608 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:55.608 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.608 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:55.608 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:55.608 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.608 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.610 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:55.610 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.610 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 2.4017ms
+2025-06-16 14:18:55.610 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 2.5217ms
+2025-06-16 14:18:55.610 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:55.610 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:55.611 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.611 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.613 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.613 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:55.613 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.613 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 3.0507ms
+2025-06-16 14:18:55.614 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:55.615 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:55.615 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.615 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 8.3573ms
+2025-06-16 14:18:55.616 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:55.616 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.616 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 5.7049ms
+2025-06-16 14:18:55.616 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:55.616 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.617 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 8.3976ms
+2025-06-16 14:18:55.617 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:55.617 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:55.617 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 9.4462ms
+2025-06-16 14:18:55.622 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.9819ms
+2025-06-16 14:18:56.506 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1 - null null
+2025-06-16 14:18:56.510 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:56.511 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:56.512 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnGet - ModelState is "Invalid"
+2025-06-16 14:18:56.542 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:56.542 +02:00 [INF] Executing an implicit handler method - ModelState is "Invalid"
+2025-06-16 14:18:56.542 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:56.550 +02:00 [INF] Executed page /GerechtDashbord in 39.2223ms
+2025-06-16 14:18:56.550 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:56.551 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/GerechtDashbord?tableId=1 - 200 null text/html; charset=utf-8 44.4615ms
+2025-06-16 14:18:56.580 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:56.580 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:56.580 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:56.581 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.581 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.581 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.582 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:56.582 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:56.583 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 1.3094ms
+2025-06-16 14:18:56.583 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:56.584 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:56.584 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.584 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 3.914ms
+2025-06-16 14:18:56.584 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:56.584 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.584 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.585 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:56.585 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.585 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 4.9857ms
+2025-06-16 14:18:56.586 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.587 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:56.587 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.587 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 6.8949ms
+2025-06-16 14:18:56.587 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:56.588 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.588 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 4.3696ms
+2025-06-16 14:18:56.588 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:56.588 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.588 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 3.9856ms
+2025-06-16 14:18:56.589 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:56.589 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:56.589 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 6.7481ms
+2025-06-16 14:18:56.591 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:56.598 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.0642ms
+2025-06-16 14:18:58.646 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/GerechtDashbord?optionType=Betalen&handler=SetOptionType - application/x-www-form-urlencoded 182
+2025-06-16 14:18:58.648 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:58.648 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:58.649 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnPostSetOptionType - ModelState is "Invalid"
+2025-06-16 14:18:58.680 +02:00 [INF] Executed handler method OnPostSetOptionType, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:58.692 +02:00 [INF] Executed page /GerechtDashbord in 44.0924ms
+2025-06-16 14:18:58.692 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:58.692 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/GerechtDashbord?optionType=Betalen&handler=SetOptionType - 200 null text/html; charset=utf-8 46.8535ms
+2025-06-16 14:18:58.748 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:58.749 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:58.749 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.750 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:58.750 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.750 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:58.751 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.751 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 1.2938ms
+2025-06-16 14:18:58.751 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:58.752 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.753 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:58.753 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.754 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:58.754 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.754 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:58.754 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.754 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 5.5124ms
+2025-06-16 14:18:58.754 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 4.3244ms
+2025-06-16 14:18:58.754 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:58.756 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.758 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:58.758 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:58.758 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.759 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 4.1953ms
+2025-06-16 14:18:58.759 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:58.759 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.759 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 11.207ms
+2025-06-16 14:18:58.759 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:58.759 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.759 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:58.759 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:58.759 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 8.2515ms
+2025-06-16 14:18:58.759 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 6.6604ms
+2025-06-16 14:18:58.765 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.4447ms
+2025-06-16 14:18:59.714 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=Cash - application/x-www-form-urlencoded 182
+2025-06-16 14:18:59.716 +02:00 [INF] Executing endpoint '/GerechtDashbord'
+2025-06-16 14:18:59.716 +02:00 [INF] Route matched with {page = "/GerechtDashbord"}. Executing page /GerechtDashbord
+2025-06-16 14:18:59.716 +02:00 [INF] Executing handler method StockServe.Pages.GerechtDashbordModel.OnPostCash - ModelState is "Invalid"
+2025-06-16 14:18:59.744 +02:00 [INF] Executed handler method OnPostCash, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2025-06-16 14:18:59.744 +02:00 [INF] Executing RedirectToPageResult, redirecting to /TafelDashbord.
+2025-06-16 14:18:59.744 +02:00 [INF] Executed page /GerechtDashbord in 28.5946ms
+2025-06-16 14:18:59.744 +02:00 [INF] Executed endpoint '/GerechtDashbord'
+2025-06-16 14:18:59.745 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7103/GerechtDashbord?handler=Cash - 302 0 null 30.9272ms
+2025-06-16 14:18:59.748 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/TafelDashbord?tableId=1 - null null
+2025-06-16 14:18:59.751 +02:00 [INF] Executing endpoint '/TafelDashbord'
+2025-06-16 14:18:59.751 +02:00 [INF] Route matched with {page = "/TafelDashbord"}. Executing page /TafelDashbord
+2025-06-16 14:18:59.754 +02:00 [INF] Executing handler method StockServe.Pages.TafelDashbordModel.OnGet - ModelState is "Valid"
+2025-06-16 14:18:59.795 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-16 14:18:59.795 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-16 14:18:59.795 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-16 14:18:59.797 +02:00 [INF] Executed page /TafelDashbord in 45.674ms
+2025-06-16 14:18:59.797 +02:00 [INF] Executed endpoint '/TafelDashbord'
+2025-06-16 14:18:59.797 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/TafelDashbord?tableId=1 - 200 null text/html; charset=utf-8 49.0343ms
+2025-06-16 14:18:59.830 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - null null
+2025-06-16 14:18:59.830 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - null null
+2025-06-16 14:18:59.830 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-16 14:18:59.831 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_framework/aspnetcore-browser-refresh.js - 200 16505 application/javascript; charset=utf-8 0.5409ms
+2025-06-16 14:18:59.831 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.831 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - null null
+2025-06-16 14:18:59.831 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.832 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - null null
+2025-06-16 14:18:59.833 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.833 +02:00 [INF] Sending file. Request path: 'css/site.b9sayid5wm.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\q12gkg8spz-b9sayid5wm.gz'
+2025-06-16 14:18:59.833 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.833 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/css/site.b9sayid5wm.css - 200 700 text/css 3.1376ms
+2025-06-16 14:18:59.833 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - null null
+2025-06-16 14:18:59.834 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.834 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.835 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - null null
+2025-06-16 14:18:59.835 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.835 +02:00 [INF] Sending file. Request path: 'StockServe.jv803yppo6.styles.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\clxm107hls-jv803yppo6.gz'
+2025-06-16 14:18:59.835 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.835 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/StockServe.jv803yppo6.styles.css - 200 1161 text/css 4.3121ms
+2025-06-16 14:18:59.837 +02:00 [INF] Sending file. Request path: 'js/site.xtxxf3hu2r.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\9jd2iyp3up-xtxxf3hu2r.gz'
+2025-06-16 14:18:59.837 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.837 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/js/site.xtxxf3hu2r.js - 200 264 text/javascript 2.2181ms
+2025-06-16 14:18:59.838 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.m9qm4tazc0.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\67mikuypsy-m9qm4tazc0.gz'
+2025-06-16 14:18:59.838 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.838 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/jquery/dist/jquery.min.m9qm4tazc0.js - 200 87578 text/javascript 5.6444ms
+2025-06-16 14:18:59.839 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7103/_vs/browserLink - null null
+2025-06-16 14:18:59.839 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\siut0tan1f-hd3gran6i8.gz'
+2025-06-16 14:18:59.839 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.839 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/js/bootstrap.bundle.min.hd3gran6i8.js - 200 80770 text/javascript 5.8374ms
+2025-06-16 14:18:59.840 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css'. Physical path: 'C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\compressed\yutjouve25-43atpzeawx.gz'
+2025-06-16 14:18:59.840 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-06-16 14:18:59.840 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/lib/bootstrap/dist/css/bootstrap.min.43atpzeawx.css - 200 232876 text/css 10.1648ms
+2025-06-16 14:18:59.845 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7103/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.9356ms

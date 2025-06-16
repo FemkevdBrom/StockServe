@@ -7,15 +7,18 @@ using Stockserve.Domain.Model;
 using Stockserve.Domain.Dto;
 using StockServe.Logic.InterfaceRepository;
 using StockServe.Logic.Exceptions;
+using Microsoft.Extensions.Logging;
 
 namespace StockServe.Logic.Service
 {   
     public class DishService
     {
         public readonly IDishRepository _dishRepository;
-        public DishService(IDishRepository dishRepository)
+        private readonly ILogger<DishService> _logger;
+        public DishService(IDishRepository dishRepository, ILogger<DishService> logger)
         {
             _dishRepository = dishRepository;
+            _logger = logger;
         }
         public List<Dish> GetAllDishes()
         {
@@ -39,12 +42,15 @@ namespace StockServe.Logic.Service
             }
             catch (DishRepositoryException ex)
             {
-                throw new Exception("Fout bij het ophalen van alle gerechten", ex);
+                _logger.LogError(ex, "Fout bij het ophalen van alle gerechten in de repository");
+                throw new DishServiceException("Fout bij het ophalen van alle gerechten", ex);
             }
             catch (Exception ex)
             {
-                throw new Exception("Fout bij het ophalen van alle gerechten bij Service", ex);
+                _logger.LogError(ex, "Fout bij het ophalen van alle gerechten in de service");
+                throw new DishServiceException("Fout bij het ophalen van alle gerechten bij Service", ex);
             }
+            throw new Exception("Testlog");
         }
 
         public bool DishExists(int dishId)
@@ -55,11 +61,11 @@ namespace StockServe.Logic.Service
             }
             catch (DishRepositoryException ex)
             {
-                throw new Exception("Fout bij het controleren of een gerecht bestaat", ex);
+                throw new DishServiceException("Fout bij het controleren of een gerecht bestaat", ex);
             }
             catch (Exception ex)
             {
-                throw new Exception("Fout bij het controleren of een gerecht bestaat bij Service", ex);
+                throw new DishServiceException("Fout bij het controleren of een gerecht bestaat bij Service", ex);
             }
         }
     }
