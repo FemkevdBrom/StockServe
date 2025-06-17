@@ -2,6 +2,7 @@
 using Stockserve.Domain.Model;
 using StockServe.Logic.Exceptions;
 using StockServe.Logic.InterfaceRepository;
+using Microsoft.Extensions.Logging;
 
 namespace StockServe.Logic.Service
 {
@@ -9,10 +10,13 @@ namespace StockServe.Logic.Service
     {
         private readonly OrderDishService _orderDishService;
         private readonly ITableRepository _tableRepository;
-        public TableService(ITableRepository tableRepository, OrderDishService orderDishService)
+        private readonly ILogger<TableService> _logger;
+
+        public TableService(ITableRepository tableRepository, OrderDishService orderDishService, ILogger<TableService> logger)
         {
             _tableRepository = tableRepository;
             _orderDishService = orderDishService;
+            _logger = logger;
         }
 
 
@@ -36,11 +40,13 @@ namespace StockServe.Logic.Service
             }
             catch (TableRepositoryException ex)
             {
+                _logger.LogError(ex, "Fout bij het ophalen van alle tafels in de repository");
                 // Vang specifieke repository fouten op
                 throw new Exception("Fout bij ophalen van alle tafels.", ex);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Fout bij het ophalen van alle tafels in de service");
                 throw new Exception("Fout bij ophalen van alle tafels.", ex);
             }
         }

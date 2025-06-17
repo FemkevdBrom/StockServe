@@ -50,7 +50,6 @@ namespace StockServe.Logic.Service
                 _logger.LogError(ex, "Fout bij het ophalen van alle gerechten in de service");
                 throw new DishServiceException("Fout bij het ophalen van alle gerechten bij Service", ex);
             }
-            throw new Exception("Testlog");
         }
 
         public bool DishExists(int dishId)
@@ -61,10 +60,12 @@ namespace StockServe.Logic.Service
             }
             catch (DishRepositoryException ex)
             {
+                _logger.LogError(ex, "Fout bij het controleren of een gerecht bestaat in de repository");
                 throw new DishServiceException("Fout bij het controleren of een gerecht bestaat", ex);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Fout bij het controleren of een gerecht bestaat in de service");
                 throw new DishServiceException("Fout bij het controleren of een gerecht bestaat bij Service", ex);
             }
         }

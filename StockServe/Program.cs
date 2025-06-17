@@ -29,8 +29,6 @@ builder.Logging.AddConsole();
 builder.Services.AddScoped<IOrderDishRepository, OrderDishRepository>();
 
 Log.Logger = new LoggerConfiguration()
-        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning) // ASP.NET logs alleen vanaf 'Warning'
-    .MinimumLevel.Override("System", LogEventLevel.Warning)    // System-logs beperken
     .MinimumLevel.Information().WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day).CreateLogger();
 builder.Host.UseSerilog();
 

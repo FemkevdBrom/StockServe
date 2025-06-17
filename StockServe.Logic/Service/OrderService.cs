@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Microsoft.Extensions.Logging;
 
 
 namespace StockServe.Logic.Service
@@ -15,9 +16,11 @@ namespace StockServe.Logic.Service
     public class OrderService
     {
         private readonly IOrderRepository _orderRepository;
-        public OrderService(IOrderRepository orderRepository)
+        private readonly ILogger<OrderService> _logger;
+        public OrderService(IOrderRepository orderRepository, ILogger<OrderService> logger)
         {
             _orderRepository = orderRepository;
+            _logger = logger;
         }
         public List<Order> GetAllOrders()
         {
@@ -41,11 +44,13 @@ namespace StockServe.Logic.Service
             }
             catch (OrderRepositoryException ex)
             {
+                _logger.LogError(ex, "Fout bij het ophalen van alle bestellingen in de repository");
                 // Vang specifieke repository fouten op
                 throw new OrderServiceException("Fout bij ophalen van alle bestellingen.", ex);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Fout bij het ophalen van alle bestellingen in de service");
                 // Vang overige onverwachte fouten op
                 throw new OrderServiceException("Onverwachte fout bij service.", ex);
 
@@ -72,11 +77,13 @@ namespace StockServe.Logic.Service
             }
             catch (OrderRepositoryException ex)
             {
+                _logger.LogError(ex, "Fout bij het toevoegen van een bestelling in de repository");
                 // Vang specifieke repository fouten op
                 throw new OrderServiceException("Fout bij toevoegen van bestelling.", ex);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Fout bij het toevoegen van een bestelling in de service");
                 // Vang overige onverwachte fouten op
                 throw new OrderServiceException("Onverwachte fout bij service.", ex);
             }
@@ -90,11 +97,13 @@ namespace StockServe.Logic.Service
             }
             catch (OrderRepositoryException ex)
             {
+                _logger.LogError(ex, "Fout bij het bijwerken van de betalingsstatus in de repository");
                 // Vang specifieke repository fouten op
                 throw new OrderServiceException("Fout bij bijwerken van betalingsstatus.", ex);
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "Fout bij het bijwerken van de betalingsstatus in de service");
                 // Vang overige onverwachte fouten op
                 throw new OrderServiceException("Onverwachte fout bij service.", ex);
             }

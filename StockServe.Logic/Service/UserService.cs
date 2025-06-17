@@ -7,15 +7,19 @@ using Stockserve.Domain.Dto;
 using Stockserve.Domain.Model;
 using StockServe.Logic.Exceptions;
 using StockServe.Logic.InterfaceRepository;
+using Microsoft.Extensions.Logging;
+
 
 namespace StockServe.Logic.Service
 {
     public class UserService
     {
         private readonly IUserRepository _userRepository;
-        public UserService(IUserRepository userRepository)
+        private readonly ILogger<UserService> _logger;
+        public UserService(IUserRepository userRepository, ILogger<UserService> logger)
         {
             _userRepository = userRepository;
+            _logger = logger;
         }
 
         public User? Authenticate(string email, string password)
@@ -38,11 +42,13 @@ namespace StockServe.Logic.Service
             }
             catch (UserRepositoryException ex)
             {
-                throw new Exception("An error occurred while retrieving user data.", ex);
+                _logger.LogError(ex, "Fout bij het controleren van de gebruiker in de repository");
+                throw new Exception("Een foutmelding tijdens het controleren van de gebruiker .", ex);
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred while authenticating the user.", ex);
+                _logger.LogError(ex, "Fout bij het controleren van de gebruiker in de service");
+                throw new Exception("een foutemlding tijdens het controleren van de gebruiker.", ex);
             }
         }
     }
