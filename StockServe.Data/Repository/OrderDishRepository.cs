@@ -101,15 +101,16 @@ namespace StockServe.Data.Repository
                 try
                 {
                     connection.Open();
-                    string query = @"INSERT INTO [OrderDish] (OrderId, DishId, Amount) 
-                                   VALUES (@OrderId, @DishId, @Amount)";
+                    string query = @"INSERT INTO [OrderDish] (OrderId, DishId, Amount, Note) 
+                                   VALUES (@OrderId, @DishId, @Amount, @Note)";
                     
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@OrderId", orderDish.OrderId);
                         command.Parameters.AddWithValue("@DishId", orderDish.DishId);
                         command.Parameters.AddWithValue("@Amount", orderDish.Amount);
-                        
+                        command.Parameters.AddWithValue("@Note", orderDish.Note ?? (object)DBNull.Value);
+
                         command.ExecuteNonQuery();
                     }
                 }

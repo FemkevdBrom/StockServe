@@ -26,6 +26,7 @@ namespace StockServe.Pages
         private const string SelectedDishesKey = "SelectedDishes";
         private const string TableIdKey = "CurrentTableId";
         private const string SelectedCategoryKey = "SelectedCategory";
+        private const string DishNotesKey = "DishNotes";
         
         [BindProperty(SupportsGet = true)]
         public string CurrentOption { get; set; } = "Bestelling";
@@ -309,126 +310,99 @@ namespace StockServe.Pages
             }
         }
 
-
-        public IActionResult OnPostBestellingToevoegen()
+        public IActionResult OnPostOpmerkingToevoegen(int dishId, string note)
         {
-            LoadTableId();
             try
             {
-                // Debug informatie
-                Console.WriteLine("=== Debug Bestelling Toevoegen ===");
-                Console.WriteLine($"TableId: {TableId}");
+                LoadTableId();
                 
-                // Haal geselecteerde gerechten op uit de sessie
-                var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
-                Console.WriteLine($"SelectedDishesJson from session: {selectedDishesJson}");
+                // Get existing notes from session
+                var notesJson = HttpContext.Session.GetString(DishNotesKey);
+                var notes = !string.IsNullOrEmpty(notesJson) 
+                    ? JsonSerializer.Deserialize<Dictionary<int, string>>(notesJson) 
+                    : new Dictionary<int, string>();
+
+                // Add or update note for the dish
+                notes[dishId] = note;
                 
-                if (!string.IsNullOrEmpty(selectedDishesJson))
-                {
-                    SelectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
-                    Console.WriteLine($"Aantal geselecteerde gerechten: {SelectedDishes?.Count ?? 0}");
-                    
-                    if (SelectedDishes != null)
-                    {
-                        foreach (var dish in SelectedDishes)
-                        {
-                            Console.WriteLine($"Gerecht: {dish.Name}, Prijs: {dish.Price}");
-                        }
-                    }
-                }
+                // Save back to session
+                HttpContext.Session.SetString(DishNotesKey, JsonSerializer.Serialize(notes));
 
-                if (SelectedDishes != null && SelectedDishes.Any())
-                {
-                    var order = new Order
-                    {
-                        TableId = TableId,
-                        Time = DateTime.Now,
-                        Price = SelectedDishes.Sum(d => d.Price),
-                        Paystatus = "Nog niet betaald"
-                    };
-                    //controleren waar of de enentueele fout bij de database ligt of bij de code kan later worden verwijderd. 
-                    Console.WriteLine($"Nieuwe bestelling details:");
-                    Console.WriteLine($"TableId: {order.TableId}");
-                    Console.WriteLine($"Time: {order.Time}");
-                    Console.WriteLine($"Price: {order.Price}");
-                    Console.WriteLine($"Paystatus: {order.Paystatus}");
-
-                    var orderService = _orderService;
-                    int orderId = orderService.AddOrder(order);
-
-                    // Add dishes to OrderDish table
-                    var orderDishRepository = _orderDishService;
-                    var dishService = _dishService;
-
-                    // Group dishes by ID and count occurrences
-                    var groupedDishes = SelectedDishes
-                        .GroupBy(d => d.Id)
-                        .Select(g => new { DishId = g.Key, Amount = g.Count() });
-
-                    foreach (var groupedDish in groupedDishes)
-                    {
-                        // Check if the dish exists in the database
-                        if (dishService.DishExists(groupedDish.DishId))
-                        {
-                            var orderDish = new OrderDishDto
-                            {
-                                OrderId = orderId,
-                                DishId = groupedDish.DishId,
-                                Amount = groupedDish.Amount
-                            };
-                            orderDishRepository.AddOrderDish(orderDish);
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Warning: Dish with ID {groupedDish.DishId} does not exist in the database");
-                        }
-                    }
-
-                    // Clear the selected dishes after successful order
-                    HttpContext.Session.Remove(SelectedDishesKey);
-                    SelectedDishes = new List<Dish>();
-
-                    return RedirectToPage("/TafelDashbord", new { tableId = TableId });
-                }
-                else
-                {
-                    ErrorMessage = "Er zijn geen gerechten geselecteerd om toe te voegen aan de bestelling.";
-                    Console.WriteLine("Error: Geen gerechten geselecteerd");
-                    return Page();
-                }
-            }
-            catch (DishServiceException ex)
-            {
-                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
-                Console.WriteLine(ErrorMessage);
-                Console.WriteLine(ex.StackTrace);
-                return Page();
-            }
-            catch (OrderDishServiceException ex)
-            {
-                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
-                Console.WriteLine(ErrorMessage);
-                Console.WriteLine(ex.StackTrace);
-                return Page();
-            }
-            catch (OrderServiceException ex)
-            {
-                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
-                Console.WriteLine(ErrorMessage);
-                Console.WriteLine(ex.StackTrace);
-                return Page();
+                // Redirect back to the same page with current option
+                return RedirectToPage(new { tableId = TableId });
             }
             catch (Exception ex)
             {
-                // Optioneel: fallback voor andere onverwachte fouten
-                ErrorMessage = $"Onverwachte fout: {ex.Message}";
-                Console.WriteLine(ErrorMessage);
-                Console.WriteLine(ex.StackTrace);
+                ErrorMessage = $"Er is een fout opgetreden bij het toevoegen van de opmerking: {ex.Message}";
                 return Page();
             }
-            HttpContext.Session.Remove(SelectedDishesKey);
-            HttpContext.Session.Remove(TableIdKey);
-            return RedirectToPage("/TafelDashbord", new { tableId = TableId });
+        }
+
+        public IActionResult OnPostBestellingToevoegen()
+        {
+            try
+            {
+                LoadTableId();
+                var selectedDishesJson = HttpContext.Session.GetString(SelectedDishesKey);
+                var notesJson = HttpContext.Session.GetString(DishNotesKey);
+                var notes = !string.IsNullOrEmpty(notesJson) 
+                    ? JsonSerializer.Deserialize<Dictionary<int, string>>(notesJson) 
+                    : new Dictionary<int, string>();
+
+                if (string.IsNullOrEmpty(selectedDishesJson))
+                {
+                    ErrorMessage = "Geen gerechten geselecteerd om toe te voegen.";
+                    return Page();
+                }
+
+                var selectedDishes = JsonSerializer.Deserialize<List<Dish>>(selectedDishesJson);
+                if (selectedDishes == null || !selectedDishes.Any())
+                {
+                    ErrorMessage = "Geen gerechten geselecteerd om toe te voegen.";
+                    return Page();
+                }
+
+                // Create new order
+                var order = new Order
+                {
+                    TableId = TableId,
+                    Time = DateTime.Now,
+                    Price = selectedDishes.Sum(d => d.Price),
+                    Paystatus = "Nog niet betaald"
+                };
+
+                var orderService = _orderService;
+                int orderId = orderService.AddOrder(order);
+
+                // Group dishes by ID and count occurrences
+                var groupedDishes = selectedDishes
+                    .GroupBy(d => d.Id)
+                    .Select(g => new { DishId = g.Key, Amount = g.Count() });
+
+                foreach (var groupedDish in groupedDishes)
+                {
+                    var orderDish = new OrderDishDto
+                    {
+                        OrderId = orderId,
+                        DishId = groupedDish.DishId,
+                        Amount = groupedDish.Amount,
+                        Status = "Actief",
+                        Note = notes.ContainsKey(groupedDish.DishId) ? notes[groupedDish.DishId] : null
+                    };
+                    _orderDishService.AddOrderDish(orderDish);
+                }
+
+                // Clear session data
+                HttpContext.Session.Remove(SelectedDishesKey);
+                HttpContext.Session.Remove(DishNotesKey);
+
+                return RedirectToPage("/TafelDashbord", new { tableId = TableId });
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = $"Er is een fout opgetreden bij het toevoegen van de bestelling: {ex.Message}";
+                return Page();
+            }
         }
 
         public IActionResult OnPostGerechtVerwijderen(int dishId)

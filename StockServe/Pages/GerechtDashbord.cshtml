@@ -46,7 +46,7 @@
                         <form method="post">
                             <button type="submit" asp-page-handler="BestellingToevoegen" class="btn btn-outline-light me-2 w-100">Bestelling toevoegen</button>
                             <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="VerwijderGerecht" class="btn btn-outline-light me-2 w-100">Verwijder gerecht</button>
-                            <button type="submit" asp-page-handler="OpmerkingToevoegenGerecht" class="btn btn-outline-light me-2 w-100">Opmerking toevoegen aan gerecht</button>
+                            <button type="submit" asp-page-handler="SetOptionType" asp-route-optionType="OpmerkingToevoegenGerecht" class="btn btn-outline-light me-2 w-100">Opmerking toevoegen aan gerecht</button>
                         </form>
                     }
                     else if (Model.CurrentOption == "Rekening")
@@ -105,7 +105,6 @@
                     {
                         <div class="w-100 mb-3 text-center">
                             @{
-
                                 var allDishes = Model.Dishes;
                                 decimal totalAmount = 0;
 
@@ -128,11 +127,11 @@
                             </form>
                         </div>
                     }
-
                     else if (Model.CurrentOption == "Terug")
                     {
                         <form method="post">
                             <button type="submit" asp-page-handler="NaarTafelDashbord" class="btn btn-outline-light me-2">Naar TafelDashboard</button>
+                            <p> Let op, Bestelling wordt niet toegevoegd.</p>
                         </form>
                     }
                 </div>
@@ -152,6 +151,42 @@
                                         <input type="hidden" name="dishId" value="@dish.Id" />
                                         <button type="submit" class="btn btn-outline-danger btn-sm">Verwijder</button>
                                     </form>
+                                </div>
+                            }
+                            else if (Model.CurrentOption == "OpmerkingToevoegenGerecht")
+                            {
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span>@dish.Name</span>
+                                    <form method="post" asp-page-handler="OpmerkingToevoegen" class="ms-2">
+                                        <input type="hidden" name="dishId" value="@dish.Id" />
+                                        <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#noteModal-@dish.Id">
+                                            Opmerking
+                                        </button>
+                                    </form>
+                                </div>
+                                <!-- Modal for each dish -->
+                                <div class="modal fade" id="noteModal-@dish.Id" tabindex="-1" aria-labelledby="noteModalLabel-@dish.Id" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content bg-dark text-light">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="noteModalLabel-@dish.Id">Opmerking toevoegen voor @dish.Name</h5>
+                                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <form method="post" asp-page-handler="OpmerkingToevoegen">
+                                                <div class="modal-body">
+                                                    <input type="hidden" name="dishId" value="@dish.Id" />
+                                                    <div class="mb-3">
+                                                        <label for="note-@dish.Id" class="form-label">Opmerking:</label>
+                                                        <textarea class="form-control bg-secondary text-light" id="note-@dish.Id" name="note" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuleren</button>
+                                                    <button type="submit" class="btn btn-primary">Opslaan</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             }
                             else
