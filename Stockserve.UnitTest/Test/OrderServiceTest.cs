@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Stockserve.Domain.Model;
 using Moq;
 using StockServe.Logic.InterfaceRepository;
+using Microsoft.Extensions.Logging;
 
 
 namespace Stockserve.UnitTest.Test
@@ -18,13 +19,15 @@ namespace Stockserve.UnitTest.Test
     public class OrderServiceTest
     {
         private Mock<IOrderRepository> _mockOrderRepo;
+        private Mock<ILogger<OrderService>> _mockLogger;
         private OrderService _orderService;
 
         [TestInitialize]
         public void Setup()
         {
             _mockOrderRepo = new Mock<IOrderRepository>();
-            _orderService = new OrderService(_mockOrderRepo.Object);
+            _mockLogger = new Mock<ILogger<OrderService>>();
+            _orderService = new OrderService(_mockOrderRepo.Object, _mockLogger.Object);
             
         }
         [TestMethod]
@@ -131,6 +134,25 @@ namespace Stockserve.UnitTest.Test
             _orderService.AddOrder(validOrder);
             // Assert is handled by ExpectedException
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(OrderServiceException))]
+        public void GetAllOrders_ShouldThrowException_WhenRepositoryFails()
+        {
+            // Arrange
+            _mockOrderRepo.Setup(repo => repo.GetAllOrders())
+                .Throws(new OrderRepositoryException("Database error", new Exception("Inner exception")));
+
+            // Act
+            _orderService.GetAllOrders();
+
+            // Assert
+            // Verwacht een OrderServiceException
+        }
+
+        
+
+
     }
 
 }

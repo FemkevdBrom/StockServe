@@ -398,6 +398,27 @@ namespace StockServe.Pages
 
                 return RedirectToPage("/TafelDashbord", new { tableId = TableId });
             }
+            catch (OrderServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
+            catch (OrderDishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
+            catch (DishServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                Console.WriteLine(ErrorMessage);
+                Console.WriteLine(ex.StackTrace);
+                return Page();
+            }
             catch (Exception ex)
             {
                 ErrorMessage = $"Er is een fout opgetreden bij het toevoegen van de bestelling: {ex.Message}";

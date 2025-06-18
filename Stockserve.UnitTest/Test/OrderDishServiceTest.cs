@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
+using Stockserve.Domain.Dto;
+using StockServe.Logic.Exceptions;
+using StockServe.Logic.InterfaceRepository;
+using StockServe.Logic.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Stockserve.Domain.Dto;
-using StockServe.Logic.Service;
-using StockServe.Logic.InterfaceRepository;
-using Moq;
 
 
 namespace Stockserve.UnitTest.Test
@@ -16,13 +18,15 @@ namespace Stockserve.UnitTest.Test
     public class OrderDishServiceTest
     {
         private Mock<IOrderDishRepository> _mockOrderDishRepo;
+        private Mock<ILogger<OrderDishService>> _mockLogger;
         private OrderDishService _orderDishService;
 
         [TestInitialize]
         public void Setup()
         {
             _mockOrderDishRepo = new Mock<IOrderDishRepository>();
-            _orderDishService = new OrderDishService(_mockOrderDishRepo.Object);
+            _mockLogger = new Mock<ILogger<OrderDishService>>();
+            _orderDishService = new OrderDishService(_mockOrderDishRepo.Object,_mockLogger.Object);
 
         }
         [TestMethod]
@@ -111,5 +115,51 @@ namespace Stockserve.UnitTest.Test
             // Assert
             _mockOrderDishRepo.Verify(repo => repo.UpdateOrderDishStatus(tableId, Status), Times.Once);
         }
+
+
+        [TestMethod]
+        [ExpectedException(typeof(OrderDishServiceException))]
+        public void GetOrderDishes_ShouldThrowException_WhenRepositoryFails()
+        {
+            // Arrange
+            _mockOrderDishRepo.Setup(repo => repo.GetOrderDishes())
+                .Throws(new OrderDishRepositoryException("Database error", new Exception("Inner exception")));
+
+            // Act
+            _orderDishService.GetOrderDishes();
+
+            // Assert
+            // Verwacht een OrderDishServiceException
+        }
+
+        [TestMethod]
+        public void GetOrderDishesForTable_ShouldReturnEmptyList_ForNegativeTableId()
+        {
+            // Arrange
+            _mockOrderDishRepo.Setup(repo => repo.GetOrderDishesForTable(-1)).Returns(new List<OrderDishDto>());
+
+            // Act
+            var result = _orderDishService.GetOrderDishesForTable(-1);
+
+            // Assert
+            Assert.AreEqual(0, result.Count);
+        }
+
+        [TestMethod]
+        public void UpdateOrderDishStatus_ShouldHandleConcurrentRequests()
+        {
+            // Arrange
+            int tableId = 5;
+            string status = "Betaald";
+            _mockOrderDishRepo.Setup(repo => repo.UpdateOrderDishStatus(It.IsAny<int>(), It.IsAny<string>()));
+
+            // Act
+            Parallel.For(0, 10, i => { _orderDishService.UpdateOrderDishStatus(tableId, status); });
+
+            // Assert
+            _mockOrderDishRepo.Verify(repo => repo.UpdateOrderDishStatus(tableId, status), Times.Exactly(10));
+        }
+
+
     }
 }

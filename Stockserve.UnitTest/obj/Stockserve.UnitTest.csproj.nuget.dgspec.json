@@ -213,6 +213,14 @@
               "target": "Package",
               "version": "[3.9.2, )"
             },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.14.1, )"

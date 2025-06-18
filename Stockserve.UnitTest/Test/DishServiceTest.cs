@@ -1,8 +1,11 @@
-﻿using StockServe.Logic.Service;
-using Moq;
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using Stockserve.Domain.Dto;
+using StockServe.Logic.Exceptions;
 using StockServe.Logic.InterfaceRepository;
+using StockServe.Logic.Service;
+using Stockserve.Domain.Model;
 
 namespace Stockserve.UnitTest.Test
 {
@@ -10,12 +13,14 @@ namespace Stockserve.UnitTest.Test
     public class DishServiceTest
     {
         private Mock<IDishRepository> _mockDishRepository;
+        private Mock<ILogger<DishService>> _mockLogger;
         private DishService _dishService;
         [TestInitialize]
         public void Setup()
         {
             _mockDishRepository = new Mock<IDishRepository>();
-            _dishService = new DishService(_mockDishRepository.Object);
+            _mockLogger = new Mock<ILogger<DishService>>();
+            _dishService = new DishService(_mockDishRepository.Object, _mockLogger.Object);
         }
 
         [TestMethod]
@@ -69,6 +74,49 @@ namespace Stockserve.UnitTest.Test
             // Assert
             Assert.IsFalse(result);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(DishServiceException))]
+        public void GetAllDishes_ShouldThrowException_WhenRepositoryFails()
+        {
+            // Arrange
+            _mockDishRepository.Setup(repo => repo.GetAllDishes()).Throws(new DishRepositoryException("Database error", new Exception("Inner exception")));
+
+            // Act
+            _dishService.GetAllDishes();
+
+            // Assert
+            // Verwacht een DishServiceException
+        }
+
+        [TestMethod]
+        public void DishExists_ShouldWorkCorrectly_UnderParallelExecution()
+        {
+            // Arrange
+            int dishId = 1;
+            _mockDishRepository.Setup(repo => repo.DishExists(dishId)).Returns(true);
+
+            // Act
+            bool[] results = new bool[10];
+            Parallel.For(0, 10, i => { results[i] = _dishService.DishExists(dishId); });
+
+            // Assert
+            Assert.IsTrue(results.All(r => r == true));
+        }
+
+        [TestMethod]
+        public void DishExists_ShouldReturnFalse_ForNegativeId()
+        {
+            // Arrange
+            _mockDishRepository.Setup(repo => repo.DishExists(-1)).Returns(false);
+
+            // Act
+            var result = _dishService.DishExists(-1);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
 
     }
 }
