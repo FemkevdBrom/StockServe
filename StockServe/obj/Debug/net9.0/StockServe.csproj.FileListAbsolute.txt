@@ -184,7 +184,6 @@ C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\StockServe.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\refint\StockServe.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\StockServe.pdb

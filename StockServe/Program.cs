@@ -21,12 +21,13 @@ builder.Services.AddScoped<ITableRepository, TableRepository>();
 builder.Services.AddScoped<TableService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<IStockRepository, StockRepository>();
+builder.Services.AddScoped<StockService>();
+
 
 // Error handeling Logger
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
-
-builder.Services.AddScoped<IOrderDishRepository, OrderDishRepository>();
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information().WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day).CreateLogger();
