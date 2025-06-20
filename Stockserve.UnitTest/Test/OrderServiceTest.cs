@@ -150,8 +150,27 @@ namespace Stockserve.UnitTest.Test
             // Verwacht een OrderServiceException
         }
 
-        
+        [TestMethod]
+        public void GetAllOrders_ShouldReturnEmptyList_WhenRepositoryReturnsEmpty()
+        {
+            // Arrange
+            _mockOrderRepo.Setup(r => r.GetAllOrders()).Returns(new List<OrderDto>());
+            // Act
+            var result = _orderService.GetAllOrders();
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(0, result.Count);
+        }
 
+        [TestMethod]
+        [ExpectedException(typeof(OrderServiceException))]
+        public void UpdatePaymentStatus_ShouldThrowException_WhenRepositoryThrows()
+        {
+            // Arrange
+            _mockOrderRepo.Setup(r => r.UpdatePaymentStatus(It.IsAny<int>(), It.IsAny<string>())).Throws(new OrderRepositoryException("DB error", new Exception()));
+            // Act
+            _orderService.UpdatePaymentStatus(1, "Betaald");
+        }
 
     }
 

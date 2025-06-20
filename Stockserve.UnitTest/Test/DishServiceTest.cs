@@ -117,6 +117,26 @@ namespace Stockserve.UnitTest.Test
             Assert.IsFalse(result);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(DishServiceException))]
+        public void DishExists_ShouldThrowException_WhenRepositoryThrows()
+        {
+            // Arrange
+            _mockDishRepository.Setup(r => r.DishExists(It.IsAny<int>())).Throws(new DishRepositoryException("DB error", new Exception()));
+            // Act
+            _dishService.DishExists(1);
+        }
 
+        [TestMethod]
+        public void GetAllDishes_ShouldReturnEmptyList_WhenRepositoryReturnsEmpty()
+        {
+            // Arrange
+            _mockDishRepository.Setup(r => r.GetAllDishes()).Returns(new List<DishDto>());
+            // Act
+            var result = _dishService.GetAllDishes();
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(0, result.Count);
+        }
     }
 }

@@ -293,3 +293,4 @@ C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.UnitTest\
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.UnitTest\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.UnitTest\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.UnitTest\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\Stockserve.UnitTest\bin\Debug\net9.0\CoverletSourceRootsMapping_Stockserve.UnitTest

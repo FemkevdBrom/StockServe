@@ -75,5 +75,29 @@ namespace Stockserve.UnitTest.Test
             // Act
             _userService.Authenticate("user@example.com", "password");
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void Authenticate_ShouldThrowGeneralException_WhenOtherExceptionOccurs()
+        {
+            // Arrange
+            _mockUserRepo.Setup(repo => repo.GetUserEmailAndPassword(It.IsAny<string>(), It.IsAny<string>())).Throws(new Exception("General error"));
+
+            // Act
+            _userService.Authenticate("user@example.com", "password");
+        }
+
+        [TestMethod]
+        public void Authenticate_ShouldReturnNull_WhenEmailOrPasswordIsNull()
+        {
+            // Arrange
+            _mockUserRepo.Setup(repo => repo.GetUserEmailAndPassword(null, null)).Returns((UserDto)null);
+
+            // Act
+            var result = _userService.Authenticate(null, null);
+
+            // Assert
+            Assert.IsNull(result);
+        }
     }
 }

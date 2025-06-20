@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1Rm9shpzOns=",
+  "dgSpecHash": "1k60okhTe0o=",
   "success": true,
   "projectFilePath": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Stockserve.UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\femke\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\femke\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\femke\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
     "C:\\Users\\femke\\.nuget\\packages\\microsoft.codecoverage\\17.14.1\\microsoft.codecoverage.17.14.1.nupkg.sha512",
     "C:\\Users\\femke\\.nuget\\packages\\microsoft.diasymreader\\2.0.0\\microsoft.diasymreader.2.0.0.nupkg.sha512",

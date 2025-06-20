@@ -141,5 +141,39 @@ namespace Stockserve.UnitTest.Test
             // Assert
             _mockStockRepo.Verify(r => r.UpdateStockQuantityAsync(1, 20), Times.Once);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(StockServiceException))]
+        public async Task GetOrderListAsync_ShouldThrowException_WhenRepositoryThrows()
+        {
+            // Arrange
+            _mockStockRepo.Setup(r => r.GetAllStocksAsync()).ThrowsAsync(new StockRepositoryException("DB error", new Exception()));
+            // Act
+            await _stockService.GetOrderListAsync();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(StockServiceException))]
+        public async Task UpdateStockQuantityAsync_ShouldThrowException_WhenRepositoryThrows()
+        {
+            // Arrange
+            var stock = new Stock { Id = 1, StockQuantity = 5 };
+            _mockStockRepo.Setup(r => r.GetAllStocksAsync()).ReturnsAsync(new List<Stock> { stock });
+            _mockStockRepo.Setup(r => r.UpdateStockQuantityAsync(It.IsAny<int>(), It.IsAny<int>())).ThrowsAsync(new StockRepositoryException("DB error", new Exception()));
+            // Act
+            await _stockService.UpdateStockQuantityAsync(1, 10);
+        }
+
+        [TestMethod]
+        public async Task GetAllStocksAsync_ShouldReturnEmptyList_WhenRepositoryReturnsEmpty()
+        {
+            // Arrange
+            _mockStockRepo.Setup(r => r.GetAllStocksAsync()).ReturnsAsync(new List<Stock>());
+            // Act
+            var result = await _stockService.GetAllStocksAsync();
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(0, result.Count);
+        }
     }
 }

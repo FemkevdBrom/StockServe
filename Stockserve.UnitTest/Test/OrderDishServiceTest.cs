@@ -160,6 +160,38 @@ namespace Stockserve.UnitTest.Test
             _mockOrderDishRepo.Verify(repo => repo.UpdateOrderDishStatus(tableId, status), Times.Exactly(10));
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(OrderDishServiceException))]
+        public void AddOrderDish_ShouldThrowException_WhenRepositoryThrows()
+        {
+            // Arrange
+            var newDish = new OrderDishDto { OrderId = 1, DishId = 1, Amount = 1 };
+            _mockOrderDishRepo.Setup(r => r.AddOrderDish(It.IsAny<OrderDishDto>())).Throws(new OrderDishRepositoryException("DB error", new Exception()));
+            // Act
+            _orderDishService.AddOrderDish(newDish);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(OrderDishServiceException))]
+        public void UpdateOrderDishStatus_ShouldThrowException_WhenRepositoryThrows()
+        {
+            // Arrange
+            _mockOrderDishRepo.Setup(r => r.UpdateOrderDishStatus(It.IsAny<int>(), It.IsAny<string>())).Throws(new OrderDishRepositoryException("DB error", new Exception()));
+            // Act
+            _orderDishService.UpdateOrderDishStatus(1, "Betaald");
+        }
+
+        [TestMethod]
+        public void GetOrderDishes_ShouldReturnEmptyList_WhenRepositoryReturnsEmpty()
+        {
+            // Arrange
+            _mockOrderDishRepo.Setup(r => r.GetOrderDishes()).Returns(new List<OrderDishDto>());
+            // Act
+            var result = _orderDishService.GetOrderDishes();
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(0, result.Count);
+        }
 
     }
 }

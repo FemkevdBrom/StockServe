@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\orderservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\orderservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\stockservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\stockservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.unittest\\test\\tableservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A582EBB-5D79-44E2-BDCD-2A9AEA30FEAC}|Stockserve.UnitTest\\Stockserve.UnitTest.csproj|solutionrelative:stockserve.unittest\\test\\tableservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{820EA389-2CCD-4EF1-B6D3-63CC68D165FB}|StockServe.Logic\\StockServe.Logic.csproj|c:\\users\\femke\\source\\repos\\semester2\\stockserve\\stockserve\\stockserve.logic\\service\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,19 +75,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "OrderServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\OrderServiceTest.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\OrderServiceTest.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\OrderServiceTest.cs*",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\OrderServiceTest.cs*",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAuwJYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T09:13:04.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TableServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\TableServiceTest.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T09:10:30.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "StockServiceTest.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\StockServiceTest.cs",
               "RelativeDocumentMoniker": "Stockserve.UnitTest\\Test\\StockServiceTest.cs",
-              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\StockServiceTest.cs",
-              "RelativeToolTip": "Stockserve.UnitTest\\Test\\StockServiceTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.UnitTest\\Test\\StockServiceTest.cs*",
+              "RelativeToolTip": "Stockserve.UnitTest\\Test\\StockServiceTest.cs*",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAMwI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T08:44:52.228Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VoorraadDashbord.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\VoorraadDashbord.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\VoorraadDashbord.cshtml.cs",
@@ -100,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "BezorgLijst.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\BezorgLijst.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\BezorgLijst.cshtml.cs",
@@ -113,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "VoorraadAanpassen.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\VoorraadAanpassen.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\VoorraadAanpassen.cshtml",
@@ -126,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "VoorraadAanpassen.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\VoorraadAanpassen.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\VoorraadAanpassen.cshtml.cs",
@@ -139,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "StockService.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\Service\\StockService.cs",
               "RelativeDocumentMoniker": "StockServe.Logic\\Service\\StockService.cs",
@@ -152,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Bestellijst.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Bestellijst.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\Bestellijst.cshtml",
@@ -165,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "VoorraadDashbord.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\VoorraadDashbord.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\VoorraadDashbord.cshtml",
@@ -178,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Bestellijst.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\Bestellijst.cshtml.cs",
               "RelativeDocumentMoniker": "StockServe\\Pages\\Bestellijst.cshtml.cs",
@@ -191,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "BezorgLijst.cshtml",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe\\Pages\\BezorgLijst.cshtml",
               "RelativeDocumentMoniker": "StockServe\\Pages\\BezorgLijst.cshtml",
@@ -204,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "StockRepository.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Data\\Repository\\StockRepository.cs",
               "RelativeDocumentMoniker": "StockServe.Data\\Repository\\StockRepository.cs",
@@ -217,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "IStockRepository.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\StockServe.Logic\\InterfaceRepository\\IStockRepository.cs",
               "RelativeDocumentMoniker": "StockServe.Logic\\InterfaceRepository\\IStockRepository.cs",
@@ -229,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "StockDto.cs",
               "DocumentMoniker": "C:\\Users\\femke\\source\\repos\\Semester2\\StockServe\\StockServe\\Stockserve.Domain\\Dto\\StockDto.cs",
               "RelativeDocumentMoniker": "Stockserve.Domain\\Dto\\StockDto.cs",
