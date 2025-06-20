@@ -267,3 +267,4 @@ C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Sinks.Console.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\bin\Debug\net9.0\Serilog.Sinks.File.dll
+C:\Users\femke\source\repos\Semester2\StockServe\StockServe\StockServe\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
