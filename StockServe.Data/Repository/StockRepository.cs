@@ -61,13 +61,20 @@ namespace StockServe.Data.Repository
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 var query = "UPDATE Stock SET OrderedStock = @OrderedStock WHERE Id = @Id";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                try
                 {
-                    command.Parameters.AddWithValue("@OrderedStock", orderedStock);
-                    command.Parameters.AddWithValue("@Id", stockId);
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@OrderedStock", orderedStock);
+                        command.Parameters.AddWithValue("@Id", stockId);
 
-                    await connection.OpenAsync();
-                    await command.ExecuteNonQueryAsync();
+                        await connection.OpenAsync();
+                        await command.ExecuteNonQueryAsync();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new StockRepositoryException($"Fout bij het updaten van de bestelde hoeveelheid voor stock item met ID {stockId}", ex);
                 }
             }
         }
@@ -77,14 +84,22 @@ namespace StockServe.Data.Repository
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 var query = "UPDATE Stock SET StockQuantity = @StockQuantity WHERE Id = @Id";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                try
                 {
-                    command.Parameters.AddWithValue("@StockQuantity", stockQuantity);
-                    command.Parameters.AddWithValue("@Id", stockId);
+                using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@StockQuantity", stockQuantity);
+                        command.Parameters.AddWithValue("@Id", stockId);
 
-                    await connection.OpenAsync();
-                    await command.ExecuteNonQueryAsync();
+                        await connection.OpenAsync();
+                        await command.ExecuteNonQueryAsync();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    throw new StockRepositoryException($"Fout bij het updaten van de voorraadhoeveelheid voor stock item met ID {stockId}", ex);
+                }
+                
             }
         }
 

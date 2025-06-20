@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Stockserve.Domain.Dto;
 using StockServe.Logic.Service;
+using StockServe.Logic.Exceptions;
 
 
 namespace StockServe.Pages
@@ -9,7 +10,7 @@ namespace StockServe.Pages
     public class BezorgLijstModel : PageModel
     {
         private readonly StockService _stockservice;
-
+        public string? ErrorMessage { get; set; }
         public List<StockDto> OrderList { get; set; } = new();
 
         [BindProperty(SupportsGet = true)]
@@ -29,12 +30,27 @@ namespace StockServe.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (SelectedItems.Any())
+            try
             {
-                await _stockservice.ProcessDeliveredItemsAsync(SelectedItems);
-            }
+                if (SelectedItems.Any())
+                {
+                    await _stockservice.ProcessDeliveredItemsAsync(SelectedItems);
+                }
 
-            return RedirectToPage(new { SearchTerm }); // pagina herladen
+                return RedirectToPage(new { SearchTerm }); // pagina herladen
+
+
+            }
+            catch (StockServiceException ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                return Page();
+            }
         }
     }
 }

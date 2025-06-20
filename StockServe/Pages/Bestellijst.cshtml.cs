@@ -14,10 +14,11 @@ namespace StockServe.Pages
 
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; } = string.Empty;
+        public string? ErrorMessage { get; set; }
 
         [BindProperty]
-[FromForm(Name = "OrderedQuantities")]
-public Dictionary<int, int> OrderedQuantities { get; set; } = new();
+        [FromForm(Name = "OrderedQuantities")]
+        public Dictionary<int, int> OrderedQuantities { get; set; } = new();
 
         public BestellijstModel(StockService stockservice)
         {
@@ -41,13 +42,18 @@ public Dictionary<int, int> OrderedQuantities { get; set; } = new();
         {
             await _stockservice.UpdateBestellingAsync(stockId, orderedQuantity);
         }
-        catch (Exception ex)
+        catch (StockServiceException ex)
         {
-            // Voeg eventueel foutafhandeling toe, zoals logging of een foutmelding in de UI
-            ModelState.AddModelError(string.Empty, $"Fout bij product met ID {stockId}: {ex.Message}");
+                    ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                    return Page();
+                }
+                catch (Exception ex)
+        {
+                    ErrorMessage = ex.Message; // Gebruik enkel de tekst uit de service
+                    return Page();
+                }
         }
-    }
-    return RedirectToPage(new { SearchTerm });
+        return RedirectToPage(new { SearchTerm });
         }
     }
 }

@@ -3,6 +3,12 @@
 @{
 }
 <div class="container-fluid bg-dark text-light p-3" style="height: 100vh;">
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            @Model.ErrorMessage
+        </div>
+    }
     <div class="row h-100">
         <!-- Sidebar -->
         <div class="col-md-3 bg-secondary text-center rounded p-3">
